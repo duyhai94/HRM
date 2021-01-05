@@ -1,0 +1,57 @@
+.card-info {
+    padding: 5px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    background-color: var(--ion-color-medium);
+    color: var(--ion-color-danger-contrast);
+    font-size: 16px;
+    font-family: Nunito-SemiBold;
+    .card-info-item {
+        display: flex;
+        align-items: center;
+    }
+    .card-info-camera {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .card-info-text {
+        font-family: OpenSans-Bold;
+        .card-info-text-name {
+            font-size: 21px;
+            color: var(--ion-color-danger-contrast);
+        }
+        .card-info-text-position {
+            font-size: 16px;
+            color: var( --light-shade);
+        }
+    }
+}
+
+.card-list {
+    padding: 5px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    background-color: var(--ion-color-medium);
+    color: var(--ion-color-danger-contrast);
+    font-size: 16px;
+    font-family: Nunito-SemiBold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    .card-list-icon {
+        display: flex;
+        align-items: center;
+    }
+    .card-list-text {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+    }
+    .card-list-button {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+}

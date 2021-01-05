@@ -1,0 +1,30 @@
+.header {
+    width: 100%;
+    height: 30px;
+    // margin-top: 50px;
+    padding-right: 24px;
+    display: flex;
+    .heaedr-icon {
+        width: 20%;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .header-text {
+        width: 60%;
+        color: var( --ion-color-medium-contrast);
+        font-size: 21px;
+        font-family: Nunito-Bold;
+        text-align: left;
+    }
+    .header-noti {
+        width: 20%;
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        .header-noti-active {
+            position: absolute;
+            top: -2px;
+            right: -2px;
+        }
+    }
+}
