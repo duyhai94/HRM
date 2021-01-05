@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { ProfileWorkPageRoutingModule } from './profile-work-routing.module';
 
 import { ProfileWorkPage } from './profile-work.page';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ProfileWorkPageRoutingModule
+    ProfileWorkPageRoutingModule,
+    SharedModule,
   ],
   declarations: [ProfileWorkPage]
 })

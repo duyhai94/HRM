@@ -1,9 +1,81 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>profile-work</ion-title>
-  </ion-toolbar>
+<ion-header class="profile-work">
+    <app-header-detail [headerTitle]="'Thông tin công việc'"></app-header-detail>
 </ion-header>
 
 <ion-content>
+    <ion-card class="card-list">
+        <div class="card-list-avatar">
+            <img class="card-list-avatar-img" src="assets/icon/avt.jfif" alt="">
+        </div>
+        <div class="card-list-header">
+            <div class="card-list-header-name">Liam Payne</div>
+            <div class="card-list-header-text">Designer</div>
+        </div>
+    </ion-card>
+    <ion-grid>
+        <ion-row>
+            <ion-col size="2" class="profile-work-icon-line">
+
+            </ion-col>
+            <ion-col size="10">
+                <ion-card class="card-list">
+                    <ion-grid>
+                        <ion-row>
+                            <ion-col size="2" class="card-list-icon">
+                                <img src="assets/icon/icon-profile.svg" alt="">
+                            </ion-col>
+                            <ion-col size="8" class="card-list-text">
+                                Designer
+                            </ion-col>
+                            <ion-col size="2" class="card-list-button" (click)="showInfo()">
+                                <ion-icon name="chevron-down-outline" *ngIf="selected == false"></ion-icon>
+                                <!-- hide -->
+                                <ion-icon name="chevron-up-outline" *ngIf="selected == true"></ion-icon>
+                            </ion-col>
+                        </ion-row>
+                        <ion-row *ngIf="selected == true">
+                            <ion-col class="card-list-info-label" size="4">Mức lương</ion-col>
+                            <ion-col class="card-list-info-text" size="8">10.000.000 VNĐ</ion-col>
+
+                            <ion-col class="card-list-info-label" size="4">Hiệu lực</ion-col>
+                            <ion-col class="card-list-info-text" size="8">22/04/2020</ion-col>
+
+                            <ion-col class="card-list-info-label" size="4">Chức vụ</ion-col>
+                            <ion-col class="card-list-info-text" size="8">Designer</ion-col>
+
+                            <ion-col class="card-list-info-label" size="4">Phòng ban</ion-col>
+                            <ion-col class="card-list-info-text" size="8">Thiết kế</ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </ion-card>
+            </ion-col>
+
+
+            <ion-col size="2" class="profile-work-icon">
+                <img src="assets/icon/person2.svg" alt="">
+            </ion-col>
+            <ion-col size="10">
+                <ion-card class="card-list">
+                    <ion-grid>
+                        <ion-row>
+                            <ion-col size="2" class="card-list-icon">
+                                <img src="assets/icon/icon-profile.svg" alt="">
+                            </ion-col>
+                            <ion-col size="8" class="card-list-text">
+                                Intern
+                            </ion-col>
+                            <ion-col size="2" class="card-list-button">
+                                <ion-icon name="chevron-down-outline"></ion-icon>
+                            </ion-col>
+                        </ion-row>
+
+                    </ion-grid>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+
+
 
 </ion-content>

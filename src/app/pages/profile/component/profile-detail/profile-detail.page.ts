@@ -14,6 +14,6 @@ export class ProfileDetailPage implements OnInit {
 
   showInfo(){
     this.selected = !this.selected;
-    
+
   }
 }
