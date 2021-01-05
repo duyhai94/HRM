@@ -38,8 +38,8 @@
     color: var(--ion-color-danger-contrast);
     font-size: 16px;
     font-family: Nunito-SemiBold;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     .card-list-icon {
         display: flex;
         align-items: center;
@@ -56,6 +56,7 @@
         justify-content: flex-end;
         outline: none;
     }
+    // phần đầu gồm avt và tên chức vụ
     .card-list-avatar {
         width: 44px;
         height: 44px;
@@ -82,5 +83,20 @@
             font-size: 16px;
             color: var( --light-shade);
         }
+    }
+    // hiện thị thông tin chi tiết trong card
+    // .card-list-info { }
+    .card-list-info-label {
+        font-size: 14px;
+        font-family: OpenSans-Bold;
+        padding: 15px 0px;
+    }
+    .card-list-info-text {
+        font-size: 14px;
+        font-family: OpenSans-Bold;
+        color: var( --light-shade);
+        text-align: right;
+        padding: 15px 0px;
+        border-bottom: 0.1px solid rgba($color: #ffffff, $alpha: 0.1);
     }
 }

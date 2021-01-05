@@ -1,0 +1,20 @@
+.button-feedback {
+    border-radius: 23px;
+    border: 1px solid var(--ion-color-warning-tint);
+    color: var(--ion-color-warning-tint);
+    font-size: 16px;
+    font-family: OpenSans-Bold;
+    height: 46px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var( --ion-item-background);
+    outline: none;
+    margin: 15px 0px;
+    padding: 10px;
+    &:focus {
+        color: var( --ion-item-background);
+        background: var(--ion-color-warning-tint);
+    }
+}
