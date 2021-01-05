@@ -5,8 +5,8 @@ import { ProfilePage } from './profile.page';
 
 const routes: Routes = [
   {
-    path: '',
-    component: ProfilePage
+    path: 'profile-home',
+    loadChildren: () => import('./component/profile-home/profile-home.module').then( m => m.ProfileHomePageModule)
   },
   {
     path: 'profile-detail',
@@ -16,6 +16,11 @@ const routes: Routes = [
     path: 'profile-work',
     loadChildren: () => import('./component/profile-work/profile-work.module').then( m => m.ProfileWorkPageModule)
   },
+  {
+    path: '',
+    redirectTo: 'profile-home',
+    pathMatch: 'full'
+  }
   
 ];
 

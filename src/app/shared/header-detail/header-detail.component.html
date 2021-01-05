@@ -1,10 +1,10 @@
 <div class="header-detail">
     <div class="header-detail-button">
         <ion-buttons slot="start">
-            <ion-back-button defaultHref="/profile">
+            <ion-back-button [defaultHref]="'/main/home'" text="" icon="chevron-back-outline">
             </ion-back-button>
         </ion-buttons>
-        <!-- <ion-icon name="chevron-back-outline"></ion-icon> -->
+
     </div>
     <div class="header-detail-text">
         {{headerTitle}}
