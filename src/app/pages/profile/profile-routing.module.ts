@@ -7,7 +7,16 @@ const routes: Routes = [
   {
     path: '',
     component: ProfilePage
-  }
+  },
+  {
+    path: 'profile-detail',
+    loadChildren: () => import('./component/profile-detail/profile-detail.module').then( m => m.ProfileDetailPageModule)
+  },
+  {
+    path: 'profile-work',
+    loadChildren: () => import('./component/profile-work/profile-work.module').then( m => m.ProfileWorkPageModule)
+  },
+  
 ];
 
 @NgModule({

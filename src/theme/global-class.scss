@@ -43,6 +43,7 @@
     .card-list-icon {
         display: flex;
         align-items: center;
+        outline: none;
     }
     .card-list-text {
         display: flex;
@@ -53,5 +54,33 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
+        outline: none;
+    }
+    .card-list-avatar {
+        width: 44px;
+        height: 44px;
+        border-radius: 16px;
+        background: var(--ion-color-primary);
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        .card-list-avatar-img {
+            width: 25px;
+            height: 25px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+    }
+    .card-list-header {
+        font-family: OpenSans-Bold;
+        padding-left: 15px;
+        .card-list-header-name {
+            font-size: 21px;
+            color: var(--ion-color-danger-contrast);
+        }
+        .card-list-header-text {
+            font-size: 16px;
+            color: var( --light-shade);
+        }
     }
 }
