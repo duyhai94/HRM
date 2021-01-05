@@ -5,8 +5,17 @@ import { MessagePage } from './message.page';
 
 const routes: Routes = [
   {
+    path: 'message-home',
+    loadChildren: () => import('./component/message-home/message-home.module').then( m => m.MessageHomePageModule)
+  },
+  {
+    path: 'message-detail',
+    loadChildren: () => import('./component/message-detail/message-detail.module').then( m => m.MessageDetailPageModule)
+  },  
+  {
     path: '',
-    component: MessagePage
+    redirectTo: 'message-home',
+    pathMatch: 'full'
   }
 ];
 
