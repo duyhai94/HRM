@@ -1,9 +1,44 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>message-detail</ion-title>
-  </ion-toolbar>
+<ion-header class="message-detail">
+    <app-header-detail [headerTitle]="'Nội dung'"></app-header-detail>
 </ion-header>
 
 <ion-content>
+    <ion-card class="card-list ">
+        <div class="card-list-avatar">
+            <img class="card-list-avatar-img" src="assets/icon/avt.jfif" alt="">
+        </div>
+        <div class="card-list-header">
+            <div class="card-list-header-name">Liam Payne</div>
+            <div class="card-list-header-text">Designer</div>
+        </div>
+    </ion-card>
+    <ion-grid class="message-detail-input">
+        <ion-row>
+            <ion-col size="3" class="message-input-label">Tiêu đề (*)</ion-col>
+            <ion-col size="9" class="message-input-label-note">* Vui lòng điền đầy đủ thông tin</ion-col>
+            <ion-col size="12">
+                <ion-textarea class="message-input-title" placeholder="Tiêu đề..."></ion-textarea>
+            </ion-col>
+            <ion-col size="12" class="message-input-title-content">
+                Nội dung (*)
+            </ion-col>
+            <ion-col size="12">
+                <ion-textarea class="message-input-content" placeholder="Nhập nội dung ...."></ion-textarea>
+            </ion-col>
+
+            <ion-col size="12" class="message-send-anonymously">
+                Gửi ẩn danh
+                <ion-toggle></ion-toggle>
+            </ion-col>
+
+            <ion-col size="12">
+                <button class="button-primary"> Gửi phản hồi</button>
+            </ion-col>
+
+
+        </ion-row>
+    </ion-grid>
+
+
 
 </ion-content>

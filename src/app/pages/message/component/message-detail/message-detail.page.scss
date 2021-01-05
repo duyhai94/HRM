@@ -1,0 +1,60 @@
+.message-detail {
+    width: 100%;
+    height: 120px;
+    padding: 50px 0px 0px 0px;
+}
+
+.message-detail-input {
+    padding: 0px 15px;
+}
+
+// input text messeage
+.message-input-title {
+    border-radius: 20px;
+    border: 0.5px solid var(--ion-color-danger-shade);
+    color: var( --light-shade);
+    font-size: 14px;
+    font-family: OpenSans-Bold;
+    padding: 10px;
+    background: var(--ion-color-medium);
+}
+
+.message-input-label {
+    font-size: 16px;
+    color: var(--ion-color-danger-shade);
+    font-family: Nunito-Regular;
+    padding-left: 5px;
+}
+
+.message-input-label-note {
+    font-size: 12px;
+    color: var(--ion-color-danger-shade);
+    font-family: OpenSans-Bold;
+    text-align: right;
+    padding-right: 5px;
+}
+
+.message-input-title-content {
+    font-size: 16px;
+    color: var( --ion-color-light-tint);
+    font-family: Nunito-Regular;
+    padding-left: 5px;
+}
+
+.message-input-content {
+    border-radius: 20px;
+    //     border: 0.5px solid var(--ion-color-danger-shade);
+    color: var( --ion-color-light-tint);
+    font-size: 14px;
+    font-family: OpenSans-Bold;
+    padding: 10px;
+    background: var(--ion-color-medium);
+    height: auto;
+}
+
+.message-send-anonymously {
+    font-size: 16px;
+    color: var( --ion-color-light-tint);
+    display: flex;
+    align-items: center;
+}
