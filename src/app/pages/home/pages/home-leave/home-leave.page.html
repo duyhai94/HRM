@@ -1,24 +1,88 @@
 <ion-header>
-    <div class="header-detail">
-        <ion-grid>
-            <ion-row>
-                <ion-col size="2" class="header-detail-button">
-                    <ion-buttons>
-                        <ion-back-button [defaultHref]="'/main/home'" text="" icon="chevron-back-outline">
-                        </ion-back-button>
-                    </ion-buttons>
-                </ion-col>
-                <ion-col size="8" class="header-detail-text">
-                    {{headerTitle}}
-                </ion-col>
-                <ion-col size="2" class="header-detail-icon">
+    <ion-grid>
+        <ion-row class="home-leave">
+            <ion-col size="2" class="home-leave-button">
+                <ion-buttons>
+                    <ion-back-button [defaultHref]="'/main/home'" text="" icon="chevron-back-outline">
+                    </ion-back-button>
+                </ion-buttons>
+            </ion-col>
+            <ion-col size="8" class="home-leave-text">
+                Xin nghỉ
+            </ion-col>
+            <ion-col size="2" class="home-leave-icon">
 
-                </ion-col>
-            </ion-row>
-        </ion-grid>
-    </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 </ion-header>
 
 <ion-content>
+    <ion-card class="card-list">
+        <ion-grid>
+            <ion-row>
+                <ion-col size="3" class="card-list-text">
+                    Loại
+                </ion-col>
+                <ion-col size="7" class="card-list-text-warning ">
+                    Nghỉ phép
+                </ion-col>
+                <ion-col size="2" class="card-list-icon-right">
+                    <img src="../../../../../assets/icon/icon-tick-right.svg" alt="">
+                </ion-col>
+            </ion-row>
 
+        </ion-grid>
+    </ion-card>
+    <ion-card class="card-list">
+        <ion-grid>
+            <ion-row>
+                <ion-col size="3" class="card-list-text">
+                    Loại
+                </ion-col>
+                <ion-col size="7" class="card-list-text-warning ">
+                    Sáng, 20/10/2020
+                </ion-col>
+                <ion-col size="2" class="card-list-icon-right">
+                    <img src="assets/icon/icon-calendar.svg" alt="">
+                </ion-col>
+            </ion-row>
+
+        </ion-grid>
+    </ion-card>
+    <ion-card class="card-list">
+        <ion-grid>
+            <ion-row>
+                <ion-col size="3" class="card-list-text">
+                    Loại
+                </ion-col>
+                <ion-col size="7" class="card-list-text-warning ">
+                    Chiều, 21/10/2020
+                </ion-col>
+                <ion-col size="2" class="card-list-icon-right">
+                    <img src="assets/icon/icon-calendar.svg" alt=" ">
+                </ion-col>
+            </ion-row>
+
+        </ion-grid>
+    </ion-card>
+    <ion-grid>
+        <ion-row class="home-leave-input">
+            <ion-col size="12" class="input-title-content">
+                Nội dung
+            </ion-col>
+            <ion-col size="12">
+                <ion-textarea rows="5" class="input-content" placeholder="Nhập nội dung...."></ion-textarea>
+            </ion-col>
+            <ion-col size="12" class="home-leave-input-day">
+                <img src="assets/icon/icon-home-leave-day.svg" alt="">
+                <div>Phép năm còn lại: 5/12 ngày</div>
+            </ion-col>
+            <ion-col size="12">
+                <button class="button-primary"> Gửi đơn</button>
+            </ion-col>
+
+
+        </ion-row>
+    </ion-grid>
 </ion-content>
