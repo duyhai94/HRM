@@ -1,0 +1,22 @@
+.header-detail {
+    width: 100%;
+    margin-top: 50px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    color: var(--ion-color-medium-contrast);
+    .header-detail-button {
+        display: flex;
+        justify-content: flex-start;
+        width: 22px;
+    }
+    .header-detail-text {
+        font-size: 16px;
+        font-family: Nunito-SemiBold;
+        color: var(--ion-color-medium-contrast);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header-detail-icon {}
+}

@@ -1,0 +1,43 @@
+.home-center {
+    margin-top: 50px;
+}
+
+.home-center-info {
+    margin: 0px 5px;
+}
+
+.home-center-title {
+    padding-left: 40px;
+    font-size: 14px;
+    color: var(--light-shade);
+    font-family: Nunito-SemiBold;
+}
+
+.card-check-in {
+    border-radius: 16px;
+    padding: 16px;
+    margin: 0px 16px 0px 16px;
+    .card-check-info {
+        display: flex;
+        justify-content: space-between;
+        color: var(--ion-color-light-tint);
+        font-size: 14px;
+        font-family: OpenSans-Bold;
+        .card-check-info-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .card-check-info-icon {
+                width: 15px;
+                margin-right: 15px;
+            }
+        }
+    }
+    .card-check-note {
+        font-size: 14px;
+        font-family: OpenSans-Bold;
+        color: var(--light-shade);
+        text-align: center;
+        margin-top: 15px;
+    }
+}

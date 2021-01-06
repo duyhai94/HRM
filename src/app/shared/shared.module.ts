@@ -3,13 +3,15 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { HeaderDetailComponent } from './header-detail/header-detail.component';
 import { IonicModule } from '@ionic/angular';
+import { HeaderCardComponent } from './header-card/header-card.component';
 
 
 
 @NgModule({
   declarations: [
      HeaderComponent,
-     HeaderDetailComponent
+     HeaderDetailComponent,
+     HeaderCardComponent,
   ],
   imports: [
     CommonModule,
@@ -18,7 +20,8 @@ import { IonicModule } from '@ionic/angular';
   ],
   exports: [
     HeaderComponent,
-    HeaderDetailComponent
+    HeaderDetailComponent,
+    HeaderCardComponent,
   ],
 })
 export class SharedModule { }

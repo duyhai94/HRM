@@ -1,0 +1,82 @@
+<ion-header class="home-center">
+    <app-header [headerTitle]="'Trang chủ'"></app-header>
+    <app-header-card></app-header-card>
+</ion-header>
+
+<ion-content>
+    <ion-grid class="home-center-info">
+        <ion-row>
+            <ion-col size="12" class="home-center-title">
+                Thống kê
+            </ion-col>
+            <ion-col size="6">
+                <ion-card class="card-statistics bg-success ">
+                    <div class="card-statistics-header">
+                        <img class="card-statistics-header-icon" src="assets/icon/icon-info.svg" alt=""> Ngày công
+                    </div>
+                    <div class="card-statistics-day">
+                        22
+                    </div>
+                </ion-card>
+            </ion-col>
+            <ion-col size="6">
+                <ion-card class="card-statistics bg-danger  ">
+                    <div class="card-statistics-header">
+                        <img class="card-statistics-header-icon" src="assets/icon/statistics3.svg" alt=""> Không phép
+                    </div>
+                    <div class="card-statistics-day">
+                        02
+                    </div>
+                </ion-card>
+            </ion-col>
+            <ion-col size="6">
+                <ion-card class="card-statistics bg-tertiary  ">
+                    <div class="card-statistics-header">
+                        <img class="card-statistics-header-icon" src="assets/icon/statistics1.svg" alt=""> Sớm, muộn
+                    </div>
+                    <div class="card-statistics-day">
+                        22
+                    </div>
+                </ion-card>
+            </ion-col>
+            <ion-col size="6">
+                <ion-card class="card-statistics bg-secondary ">
+                    <div class="card-statistics-header">
+                        <img class="card-statistics-header-icon" src="assets/icon/statistics2.svg" alt=""> Có phép
+                    </div>
+                    <div class="card-statistics-day">
+                        22
+                    </div>
+                </ion-card>
+            </ion-col>
+            <ion-col size="12" class="home-center-title">
+                Check-in/ out
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <ion-card class="card-check-in">
+        <div class="card-check-info">
+            <div class="card-check-info-text">
+                <div> <img class="card-check-info-icon" src="assets/icon/chevron_right.svg" alt=""> 09:00 AM</div>
+                <div> <img class="card-check-info-icon" src="assets/icon/wiffi.svg" alt=""> Consult Indochina</div>
+                <div> <img class="card-check-info-icon" src="assets/icon/location.svg" alt=""> Tầng 4, N03-T7 , Ng...</div>
+            </div>
+            <img src="assets/icon/icon-id.svg" alt="">
+        </div>
+        <div class="card-check-note">
+            Chạm tay vào Icon để chấm công
+        </div>
+    </ion-card>
+    <ion-grid>
+        <ion-row>
+            <ion-col size="6">
+            </ion-col>
+            <ion-col size="6">
+                <button routerLink="/main/home/home-leave" class="button-feedback-36"> Xin nghỉ</button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
+<!-- <ion-footer>
+
+</ion-footer> -->

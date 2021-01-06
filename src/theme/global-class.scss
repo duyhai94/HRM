@@ -108,3 +108,47 @@
         padding: 15px 0px;
     }
 }
+
+// background gradient + card
+//xanh lá cây
+.bg-success {
+    background-image: linear-gradient(#93BC6F, #B1B963);
+}
+
+// đỏ
+.bg-danger {
+    background-image: linear-gradient(#C9785F, #A54D4D);
+}
+
+//xanh nước biển
+.bg-secondary {
+    background-image: linear-gradient(#6B8FAF, #4CB199);
+}
+
+//tím
+.bg-tertiary {
+    background-image: linear-gradient(#AF6BAD, #7F4CB1);
+}
+
+.card-statistics {
+    margin: 0px;
+    padding: 15px;
+    border-radius: 16px;
+    font-size: 14px;
+    color: var(--ion-color-light-tint);
+    .card-statistics-header {
+        display: flex;
+        align-items: center;
+        .card-statistics-header-icon {
+            margin-right: 15px;
+        }
+    }
+    .card-statistics-day {
+        text-align: right;
+        &::after {
+            content: "ngày";
+            color: var( --light-shade);
+            margin-left: 5px;
+        }
+    }
+}

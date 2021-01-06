@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15.466" height="11.639" viewBox="0 0 15.466 11.639">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#93bc6f"/>
+      <stop offset="1" stop-color="#b1b963"/>
+    </linearGradient>
+  </defs>
+  <g id="wi-fi_1_" data-name="wi-fi (1)" transform="translate(0 -2.569)">
+    <g id="Group_5070" data-name="Group 5070" transform="translate(0 2.569)">
+      <circle id="Ellipse_74" data-name="Ellipse 74" cx="1.807" cy="1.807" r="1.807" transform="translate(5.963 8.025)" fill="url(#linear-gradient)"/>
+      <path id="Path_3087" data-name="Path 3087" d="M13.041,9.333c-.027-.028-.055-.052-.083-.077l-.081-.077a.4.4,0,0,0-.045-.038,5.894,5.894,0,0,0-8.142.191l-.261.262-.362.362a1.134,1.134,0,0,0,1.6,1.6l.624-.624a3.641,3.641,0,0,1,5.142,0l.451.436a1.125,1.125,0,0,0,1.917-.8,1.1,1.1,0,0,0-.327-.792Z" transform="translate(-0.954 -3.854)" fill="url(#linear-gradient)"/>
+      <path id="Path_3088" data-name="Path 3088" d="M15.165,5.815l-.375-.375s0,0-.005,0l-.3-.3A1.069,1.069,0,0,0,14.32,5a9.836,9.836,0,0,0-13.286.306c-.018.016-.038.028-.056.045L.3,6.032A1.035,1.035,0,0,0,1.764,7.495l.678-.677A.088.088,0,0,1,2.454,6.8a7.765,7.765,0,0,1,10.715-.059l.533.534a1.035,1.035,0,0,0,1.463-1.463Z" transform="translate(0 -2.569)" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+</svg>
