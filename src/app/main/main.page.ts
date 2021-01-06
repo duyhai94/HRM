@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.page.scss'],
 })
 export class MainPage implements OnInit {
-
+  select:number=1;
   constructor() { }
 
   ngOnInit() {
   }
-
+  activeNarbar(active){
+    this.select = active;
+  }
 }
