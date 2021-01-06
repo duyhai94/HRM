@@ -31,4 +31,23 @@
 // import 
 @import "./theme/global-class.scss";
 @import "./theme/button-class.scss";
-// @import "./theme/variables.scss";s
+// @import "./theme/variables.scss";
+// alertservice
+// .alert-wrapper {
+//     background-image: url('./assets/icon/icon-timekeeping.svg');
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     background-position: top left;
+// }
+.time-keeping-false {
+    --background: var(--ion-card-background);
+    padding: 150px 15px 15px 15px;
+    width: 100%;
+}
+
+.time-keeping-false .alert-wrapper {
+    background-image: url('./assets/icon/icon-timekeeping.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
