@@ -43,13 +43,11 @@
 
 .message-input-content {
     border-radius: 20px;
-    //     border: 0.5px solid var(--ion-color-danger-shade);
     color: var( --ion-color-light-tint);
     font-size: 14px;
     font-family: OpenSans-Bold;
     padding: 10px;
     background: var(--ion-color-medium);
-    height: auto;
 }
 
 .message-send-anonymously {
@@ -57,4 +55,8 @@
     color: var( --ion-color-light-tint);
     display: flex;
     align-items: center;
+    .message-send-anonymously-button {
+        margin-left: 15px;
+        zoom: 0.8;
+    }
 }
