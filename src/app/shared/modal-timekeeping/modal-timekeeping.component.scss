@@ -1,0 +1,32 @@
+.modal {
+    width: 100%;
+    height: 100vh;
+    background: var( --light-shade);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .card-modal {
+        border-radius: 20px;
+        padding: 10px;
+        background: var( --ion-card-background);
+        color: var(--ion-color-light-tint);
+        .card-modal-header {
+            font-size: 18px;
+            font-family: Nunito-Bold;
+            text-align: center;
+        }
+        .card-modal-text {
+            font-size: 16px;
+            font-family: Nunito-SemiBold;
+            text-align: center;
+        }
+        .card-modal-close {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .card-modal-img {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

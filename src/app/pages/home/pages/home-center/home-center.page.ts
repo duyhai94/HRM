@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 import { AlertService } from 'src/app/shared/service/alert.service';
+import { ModalService } from 'src/app/shared/service/modal.service';
 
 @Component({
   selector: 'app-home-center',
@@ -8,11 +10,15 @@ import { AlertService } from 'src/app/shared/service/alert.service';
 })
 export class HomeCenterPage implements OnInit {
 
-  constructor( public alertService :AlertService) { }
+  constructor( public modalService : ModalService,) { }
 
   ngOnInit() {
   }
   timeKeeping() {
-    this.alertService.TimeKeeping();
+    this.modalService.TimeKeepingModal();
+    setTimeout(() => {
+      this.modalService.CloseModal();
+    },2000);
   }
+ 
 }

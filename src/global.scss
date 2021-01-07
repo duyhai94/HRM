@@ -33,12 +33,6 @@
 @import "./theme/button-class.scss";
 // @import "./theme/variables.scss";
 // alertservice
-// .alert-wrapper {
-//     background-image: url('./assets/icon/icon-timekeeping.svg');
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//     background-position: top left;
-// }
 .time-keeping-false {
     --background: var(--ion-card-background);
     padding: 150px 15px 15px 15px;
@@ -50,4 +44,17 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+}
+
+//modal
+.modal-wrapper {
+    background: #222;
+}
+
+.my-custom-class .modal-wrapper {
+    background: #222;
+}
+
+.my-custom-class {
+    --background: #222;
 }
