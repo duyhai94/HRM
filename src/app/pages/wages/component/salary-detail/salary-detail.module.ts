@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { SalaryDetailPageRoutingModule } from './salary-detail-routing.module';
 
 import { SalaryDetailPage } from './salary-detail.page';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    SalaryDetailPageRoutingModule
+    SalaryDetailPageRoutingModule,
+    SharedModule,
   ],
   declarations: [SalaryDetailPage]
 })

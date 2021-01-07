@@ -1,0 +1,67 @@
+.salary-detail-text-succcess {
+    padding-top: 15px;
+    color: var(--ion-color-success);
+    font-size: 14px;
+    font-family: OpenSans-SemiBold;
+    text-align: right;
+    &::after {
+        content: "VNĐ";
+        margin-left: 5px;
+    }
+}
+
+.salary-detail-text-danger {
+    padding-top: 15px;
+    color: var(--ion-color-danger);
+    font-size: 14px;
+    font-family: OpenSans-SemiBold;
+    text-align: right;
+    &::after {
+        content: "VNĐ";
+        margin-left: 5px;
+    }
+}
+
+.salary-detail-text {
+    padding-top: 15px;
+    font-size: 14px;
+    font-family: OpenSans-SemiBold;
+    text-align: right;
+    &::after {
+        content: "VNĐ";
+        margin-left: 5px;
+    }
+}
+
+.card-salary {
+    padding: 5px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    background-color: var(--ion-color-medium);
+    color: var( --ion-card-background);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    .card-salary-icon {
+        width: 16px;
+        height: 16px;
+        object-fit: cover;
+        padding-top: 5px;
+    }
+    .card-salary-header {
+        font-size: 16px;
+        font-family: OpenSans-SemiBold;
+        padding-bottom: 10px;
+    }
+    .card-salary-money {
+        color: var(--ion-color-light);
+        padding-top: 15px;
+        font-size: 21px;
+        font-family: OpenSans-SemiBold;
+        text-align: right;
+        &::after {
+            content: "VNĐ";
+            margin-left: 5px;
+        }
+    }
+}
