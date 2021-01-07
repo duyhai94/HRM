@@ -5,8 +5,8 @@
 <ion-content>
     <ion-grid class="wages-home-calendar">
         <ion-row>
-            <!-- <ion-col size="12">
-                <ion-navbar>
+            <ion-col size="12">
+                <!-- <ion-navbar>
                     <ion-title>{{viewTitle}}</ion-title>
                     <ion-buttons end>
                         <button ion-button [disabled]="isToday" (click)="today()">Today</button>
@@ -15,13 +15,13 @@
                         <button ion-button (click)="changeMode('day')">D</button>
                         <button ion-button (click)="loadEvents()">Load Events</button>
                     </ion-buttons>
-                </ion-navbar>
+                </ion-navbar> -->
             </ion-col>
             <ion-col size="12">
                 <calendar [eventSource]="eventSource" [calendarMode]="calendar.mode" [currentDate]="calendar.currentDate" (onCurrentDateChanged)="onCurrentDateChanged($event)" (onEventSelected)="onEventSelected($event)" (onTitleChanged)="onViewTitleChanged($event)" (onTimeSelected)="onTimeSelected($event)"
                     step="30">
                 </calendar>
-            </ion-col> -->
+            </ion-col>
         </ion-row>
         <ion-row class="payroll" routerLink="/main/wages/wages-payroll">
             <ion-col size="6" class="payroll-header"> Bảng lương </ion-col>

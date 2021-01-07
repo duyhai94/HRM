@@ -63,3 +63,8 @@ ion-select {
     width: 100%;
     justify-content: center;
 }
+
+//remove header bottom ion-header
+.header-md::after {
+    display: none;
+}
