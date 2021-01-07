@@ -13,10 +13,15 @@ const routes: Routes = [
     loadChildren: () => import('./component/wages-payroll/wages-payroll.module').then( m => m.WagesPayrollPageModule)
   },
   {
+    path: 'salary-detail',
+    loadChildren: () => import('./component/salary-detail/salary-detail.module').then( m => m.SalaryDetailPageModule)
+  },
+  {
     path: '',
     redirectTo: 'wages-home',
     pathMatch: 'full'
   },
+ 
  
   
 ];

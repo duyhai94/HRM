@@ -8,7 +8,7 @@
     padding: 0px 16px;
 }
 
-.card-payroll {
+.payroll {
     width: 100%;
     padding: 15px 15px 40px 15px;
     background-image: url('../../../../../assets/icon/payroll.svg');
@@ -18,25 +18,25 @@
     color: var(--ion-color-light);
     outline: none;
     cursor: pointer;
-    .card-payroll-header {
+    .payroll-header {
         font-size: 16px;
         font-family: Nunito-SemiBold;
     }
-    .card-payroll-header-detail {
+    .payroll-header-detail {
         font-size: 12px;
         font-family: Nunito-Regular;
         text-align: right;
     }
-    .card-payroll-info {
+    .payroll-info {
         display: flex;
         justify-content: space-between;
         padding-bottom: 5px;
-        .card-payroll-info-label {
+        .payroll-info-label {
             font-size: 13px;
             color: var(--light-shade);
             font-family: OpenSans-Bold;
         }
-        .card-payroll-info-text {
+        .payroll-info-text {
             font-size: 16px;
             color: var( --ion-color-warning-tint);
             font-family: OpenSans-Bold;
