@@ -5,9 +5,20 @@ import { WagesPage } from './wages.page';
 
 const routes: Routes = [
   {
+    path: 'wages-home',
+    loadChildren: () => import('./component/wages-home/wages-home.module').then( m => m.WagesHomePageModule)
+  },
+  {
+    path: 'wages-payroll',
+    loadChildren: () => import('./component/wages-payroll/wages-payroll.module').then( m => m.WagesPayrollPageModule)
+  },
+  {
     path: '',
-    component: WagesPage
-  }
+    redirectTo: 'wages-home',
+    pathMatch: 'full'
+  },
+ 
+  
 ];
 
 @NgModule({

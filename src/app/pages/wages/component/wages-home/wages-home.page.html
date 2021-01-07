@@ -1,0 +1,51 @@
+<ion-header class="wages-home">
+    <app-header [headerTitle]="'Công lương'"></app-header>
+</ion-header>
+
+<ion-content>
+    <ion-grid class="wages-home-calendar">
+        <ion-row>
+            <!-- <ion-col size="12">
+                <ion-navbar>
+                    <ion-title>{{viewTitle}}</ion-title>
+                    <ion-buttons end>
+                        <button ion-button [disabled]="isToday" (click)="today()">Today</button>
+                        <button ion-button (click)="changeMode('month')">M</button>
+                        <button ion-button (click)="changeMode('week')">W</button>
+                        <button ion-button (click)="changeMode('day')">D</button>
+                        <button ion-button (click)="loadEvents()">Load Events</button>
+                    </ion-buttons>
+                </ion-navbar>
+            </ion-col>
+            <ion-col size="12">
+                <calendar [eventSource]="eventSource" [calendarMode]="calendar.mode" [currentDate]="calendar.currentDate" (onCurrentDateChanged)="onCurrentDateChanged($event)" (onEventSelected)="onEventSelected($event)" (onTitleChanged)="onViewTitleChanged($event)" (onTimeSelected)="onTimeSelected($event)"
+                    step="30">
+                </calendar>
+            </ion-col> -->
+        </ion-row>
+        <ion-row class="card-payroll" routerLink="/main/wages/wages-payroll">
+            <ion-col size="6" class="card-payroll-header"> Bảng lương </ion-col>
+            <ion-col size="6" class="card-payroll-header-detail"> Chi tiết </ion-col>
+
+            <ion-col size="3">
+                <img src="assets/icon/icon-wallet.svg" alt="">
+            </ion-col>
+            <ion-col size="9">
+                <div class="card-payroll-info">
+                    <div class="card-payroll-info-label">Tháng:</div>
+                    <div class="card-payroll-info-text"> 04/2020</div>
+                </div>
+                <div class="card-payroll-info">
+                    <div class="card-payroll-info-label">Thực lĩnh:</div>
+                    <div class="card-payroll-info-text">** *** *** VNĐ </div>
+                </div>
+
+            </ion-col>
+
+            <ion-col size="7"></ion-col>
+            <ion-col size="5">
+                <button class="button-feedback-23"> Hiện thị</button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
