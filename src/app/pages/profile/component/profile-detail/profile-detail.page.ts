@@ -6,14 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile-detail.page.scss'],
 })
 export class ProfileDetailPage implements OnInit {
-  selected: boolean = false;
+  selected: number;
+
+
   constructor() { }
 
   ngOnInit() {
   }
 
-  showInfo(){
-    this.selected = !this.selected;
+  showInfo( event : number){
+    this.selected = event;
+  
+    
+    
+
+   
+    
 
   }
 }

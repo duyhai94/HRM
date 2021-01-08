@@ -13,13 +13,13 @@
                 <ion-col size="8" class="card-list-text">
                     Tổng quan
                 </ion-col>
-                <ion-col size="2" class="card-list-button" (click)="showInfo()">
-                    <ion-icon name="chevron-down-outline" *ngIf="selected == false"></ion-icon>
+                <ion-col size="2" class="card-list-button" (click)="showInfo(1)">
+                    <ion-icon name="chevron-down-outline" *ngIf="selected != 1"></ion-icon>
                     <!-- hide -->
-                    <ion-icon name="chevron-up-outline" *ngIf="selected == true"></ion-icon>
+                    <ion-icon name="chevron-up-outline" *ngIf="selected == 1"></ion-icon>
                 </ion-col>
             </ion-row>
-            <ion-row *ngIf="selected == true">
+            <ion-row *ngIf="selected == 1">
                 <ion-col class="card-list-info-label" size="4">Họ tên</ion-col>
                 <ion-col class="card-list-info-text" size="8">Trần Quang Anh</ion-col>
 
@@ -44,11 +44,21 @@
                 <ion-col size="8" class="card-list-text">
                     Liên hệ
                 </ion-col>
-                <ion-col size="2" class="card-list-button">
-                    <ion-icon name="chevron-down-outline"></ion-icon>
+                <ion-col size="2" class="card-list-button" (click)="showInfo(2)">
+                    <ion-icon name="chevron-down-outline" *ngIf="selected != 2"></ion-icon>
+                    <!-- hide -->
+                    <ion-icon name="chevron-up-outline" *ngIf="selected == 2"></ion-icon>
                 </ion-col>
             </ion-row>
+            <ion-row *ngIf="selected == 2">
+                <ion-col class="card-list-info-label" size="4">Email:</ion-col>
+                <ion-col class="card-list-info-text" size="8">tranquanganh@gmail.com</ion-col>
 
+                <ion-col class="card-list-info-label" size="4">Phone</ion-col>
+                <ion-col class="card-list-info-text" size="8">0987654321</ion-col>
+
+
+            </ion-row>
         </ion-grid>
     </ion-card>
     <ion-card class="card-list">

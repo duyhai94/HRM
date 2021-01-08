@@ -12,7 +12,7 @@
                 <ion-col size="2" class="card-info-item">
                     <img src="assets/icon/person.svg" alt="">
                 </ion-col>
-                <ion-col size="8" class="card-info-text">
+                <ion-col size="7" class="card-info-text">
                     <div class="card-info-text-name">
                         Liam Payne
                     </div>
@@ -20,8 +20,12 @@
                         Designer
                     </div>
                 </ion-col>
-                <ion-col size="2" class="card-info-camera">
-                    <img src="assets/icon/camera.svg" alt="">
+                <ion-col size="3" class="card-info-camera">
+                    <!-- <img src="assets/icon/camera.svg" alt=""> -->
+                    <input type="file" #fileInput (change)="uploadFile($event)" hidden="true" accept="image/*" />
+                    <ion-fab-button (click)="selectImageSource()">
+                        <img src="assets/icon/camera.svg" alt="">
+                    </ion-fab-button>
                 </ion-col>
 
             </ion-row>
