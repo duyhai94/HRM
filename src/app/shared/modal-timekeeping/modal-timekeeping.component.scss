@@ -1,15 +1,16 @@
 .modal {
     width: 100%;
-    height: 100vh;
-    background: var( --light-shade);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 100%;
+    // background: var( --light-shade);
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
     .card-modal {
         border-radius: 20px;
         padding: 10px;
         background: var( --ion-card-background);
         color: var(--ion-color-light-tint);
+        margin: 0px;
         .card-modal-header {
             font-size: 18px;
             font-family: Nunito-Bold;

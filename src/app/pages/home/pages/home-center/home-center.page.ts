@@ -18,7 +18,7 @@ export class HomeCenterPage implements OnInit {
     this.modalService.TimeKeepingModal();
     setTimeout(() => {
       this.modalService.CloseModal();
-    },2000);
+    },3000);
   }
  
 }
