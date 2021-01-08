@@ -1,0 +1,24 @@
+<ion-grid class="feedback-detail-input">
+    <ion-row>
+        <ion-col size="3" class="feedback-input-label">Tiêu đề (*)</ion-col>
+        <ion-col size="9" class="feedback-input-label-note">* Vui lòng điền đầy đủ thông tin</ion-col>
+        <ion-col size="12">
+            <ion-textarea class="feedback-input-title" placeholder="Tiêu đề..."></ion-textarea>
+        </ion-col>
+        <ion-col size="12" class="feedback-input-title-content">
+            Nội dung (*)
+        </ion-col>
+        <ion-col size="12">
+            <ion-textarea rows="8" class="feedback-input-content" placeholder="Nhập nội dung...."></ion-textarea>
+        </ion-col>
+        <ion-col size="12" class="feedback-send-anonymously">
+            Gửi ẩn danh
+            <div class="feedback-send-anonymously-button">
+                <ion-toggle mode="ios"></ion-toggle>
+            </div>
+        </ion-col>
+        <ion-col size="12">
+            <button class="button-primary">{{buttonFeedbackTitle}}</button>
+        </ion-col>
+    </ion-row>
+</ion-grid>

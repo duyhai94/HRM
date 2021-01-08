@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { MessageHomePageRoutingModule } from './message-home-routing.module';
+import { WagesFeedbackPageRoutingModule } from './wages-feedback-routing.module';
 
-import { MessageHomePage } from './message-home.page';
+import { WagesFeedbackPage } from './wages-feedback.page';
 import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
@@ -14,9 +14,9 @@ import { SharedModule } from 'src/app/shared/shared.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    MessageHomePageRoutingModule,
+    WagesFeedbackPageRoutingModule,
     SharedModule,
   ],
-  declarations: [MessageHomePage]
+  declarations: [WagesFeedbackPage]
 })
-export class MessageHomePageModule {}
+export class WagesFeedbackPageModule {}

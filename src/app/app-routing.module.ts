@@ -10,6 +10,10 @@ const routes: Routes = [
     path: '',
     redirectTo: 'main',
     pathMatch: 'full'
+  },
+  {
+    path: 'mail',
+    loadChildren: () => import('./pages/mail/mail.module').then( m => m.MailPageModule)
   }
 ];
 @NgModule({

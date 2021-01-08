@@ -17,10 +17,20 @@ const routes: Routes = [
     loadChildren: () => import('./component/salary-detail/salary-detail.module').then( m => m.SalaryDetailPageModule)
   },
   {
+    path: 'wages-feedback',
+    loadChildren: () => import('./component/wages-feedback/wages-feedback.module').then( m => m.WagesFeedbackPageModule)
+  },
+  {
+    path: 'wages-confirm',
+    loadChildren: () => import('./component/wages-confirm/wages-confirm.module').then( m => m.WagesConfirmPageModule)
+  },
+
+  {
     path: '',
     redirectTo: 'wages-home',
     pathMatch: 'full'
   },
+
  
  
   

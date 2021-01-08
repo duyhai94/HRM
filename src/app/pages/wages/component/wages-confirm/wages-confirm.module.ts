@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { MessagePageRoutingModule } from './message-routing.module';
+import { WagesConfirmPageRoutingModule } from './wages-confirm-routing.module';
 
-import { MessagePage } from './message.page';
+import { WagesConfirmPage } from './wages-confirm.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    MessagePageRoutingModule
+    WagesConfirmPageRoutingModule
   ],
-  declarations: [MessagePage]
+  declarations: [WagesConfirmPage]
 })
-export class MessagePageModule {}
+export class WagesConfirmPageModule {}

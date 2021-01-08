@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { MessageDetailPageRoutingModule } from './message-detail-routing.module';
+import { MailHomePageRoutingModule } from './mail-home-routing.module';
 
-import { MessageDetailPage } from './message-detail.page';
+import { MailHomePage } from './mail-home.page';
 import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
@@ -14,9 +14,9 @@ import { SharedModule } from 'src/app/shared/shared.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    MessageDetailPageRoutingModule,
+    MailHomePageRoutingModule,
     SharedModule,
   ],
-  declarations: [MessageDetailPage]
+  declarations: [MailHomePage]
 })
-export class MessageDetailPageModule {}
+export class MailHomePageModule {}

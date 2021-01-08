@@ -17,11 +17,11 @@ const routes: Routes = [
         loadChildren: () => import('../pages/wages/wages.module').then(m => m.WagesPageModule)
       },
       {
-        path:'message',
-        loadChildren: () => import('../pages/message/message.module').then(m => m.MessagePageModule)
-      },
-      {path: 'profile',
-      loadChildren: () => import('../pages/profile/profile.module').then(m => m.ProfilePageModule)
+        path: 'profile',
+        loadChildren: () => import('../pages/profile/profile.module').then(m => m.ProfilePageModule)
+      },{
+        path:'mail',
+        loadChildren:() => import('../pages/mail/mail.module').then(m => m.MailPageModule)
       },
       {
         path: '',
