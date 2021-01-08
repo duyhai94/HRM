@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./wages-confirm.page.scss'],
 })
 export class WagesConfirmPage implements OnInit {
-
+  selected: boolean = false;
   constructor() { }
 
   ngOnInit() {
   }
-
+  showInfo(){
+    this.selected = !this.selected;
+  }
 }
