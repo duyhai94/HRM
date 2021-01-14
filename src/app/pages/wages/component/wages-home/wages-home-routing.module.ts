@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: WagesHomePage
+  },  {
+    path: 'detail-event',
+    loadChildren: () => import('./detail-event/detail-event.module').then( m => m.DetailEventPageModule)
   },
+
   
 ];
 

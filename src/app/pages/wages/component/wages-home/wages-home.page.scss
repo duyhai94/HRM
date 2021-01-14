@@ -3,9 +3,61 @@
     margin-bottom: 30px;
 }
 
+.header-wages {
+    color: var(--ion-color-danger-contrast) !important;
+    p {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 8px 0;
+        border-radius: 20px;
+        border: 0.5px solid var(--ion-color-warning-tint);
+        font-size: 16;
+        font-weight: 600;
+        color: var(--ion-color-warning-tint);
+    }
+    .head {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 10px 0;
+        button {
+            background-color: transparent;
+            &:focus {
+                outline: none;
+            }
+            ion-icon {
+                color: var(--ion-color-warning-tint);
+                font-size: 20px;
+                font-weight: 600;
+            }
+        }
+        span {
+            color: var(--ion-color-warning-tint);
+            font-weight: 600;
+            display: block;
+            padding-bottom: 2px;
+        }
+    }
+}
+
 .wages-home-calendar {
     width: 100%;
     padding: 0px 16px;
+    .event-binding {
+        position: absolute;
+        display: flex;
+        z-index: 1000;
+        top: 0;
+        right: 0;
+        .item-circle {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+    }
 }
 
 .payroll {

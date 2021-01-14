@@ -31,6 +31,7 @@
 // import 
 @import "./theme/global-class.scss";
 @import "./theme/button-class.scss";
+@import "./theme/calendar.scss";
 // @import "./theme/variables.scss";
 // alertservice
 .time-keeping-false {
@@ -79,4 +80,52 @@ ion-select {
 //remove header bottom ion-header
 .header-md::after {
     display: none;
+}
+
+.alert-wrapper {
+    background: #dddddd;
+}
+
+//********************
+.sc-ion-picker-ios-h {
+    --border-color: none !important;
+}
+
+.picker-above-highlight.sc-ion-picker-ios {
+    background: rgba($color: #292929, $alpha: 0.5);
+}
+
+.picker-below-highlight.sc-ion-picker-ios {
+    background: rgba($color: #292929, $alpha: 0.5);
+}
+
+.picker-opt {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.picker-wrapper.sc-ion-picker-ios {
+    border-radius: 20px 20px 0px 0px;
+    background-color: #292929;
+}
+
+.picker-opt-selected {
+    background-color: rgba($color: #F0DE9F, $alpha: 0.5);
+    border-radius: 7px;
+    height: 35px;
+    margin-top: 4px;
+}
+
+.picker-col {
+    max-width: 70px !important;
+}
+
+//****camera
+.action-sheet-group.sc-ion-action-sheet-md {
+    background-color: #dddddd !important;
+    border-radius: 20px !important;
+    margin: 5px !important;
 }

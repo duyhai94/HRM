@@ -34,16 +34,3 @@
     }
     
     //datetime
-    .datetime {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        .datetime-text {
-            font-size: 16px;
-            color: var(--ion-color-danger-contrast);
-        }
-        .datetime-picker {
-            font-size: 16px;
-            color: var(--ion-color-warning-tint);
-        }
-    }

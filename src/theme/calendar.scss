@@ -1,0 +1,57 @@
+.monthview-primary-with-event {
+    position: relative;
+    background-color: unset !important;
+    color: var(--ion-color-danger-contrast) !important;
+}
+
+.monthview-secondary-with-event {
+    position: relative;
+    background-color: unset !important;
+}
+
+.event-detail-container {
+    display: none;
+}
+
+.monthview-selected {
+    font-weight: bold;
+    background-color: var(--ion-color-primary-tint) !important;
+    color: var(--ion-color-primary-contrast) !important;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+}
+
+.monthview-current {
+    border-radius: 50% !important;
+    color: var(--ion-color-danger-shade) !important;
+}
+
+.monthview-container {
+    td,
+    th,
+    tbody,
+    table {
+        border: 0 !important;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 27px !important;
+        background-color: transparent;
+        color: var(--ion-color-danger-contrast);
+    }
+    table {
+        margin: 10px;
+    }
+    tr {
+        width: 1.5rem !important;
+        height: 1.5rem !important;
+        border: none !important;
+    }
+    thead {
+        tr {
+            th {
+                font-size: 21.5px;
+            }
+        }
+    }
+}

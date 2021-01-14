@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import { Plugins, CameraResultType, CameraSource } from '@capacitor/core';
 import { Platform, ActionSheetController } from '@ionic/angular';
 
@@ -9,15 +10,28 @@ const { Camera } = Plugins;
   styleUrls: ['./profile-home.page.scss'],
 })
 export class ProfileHomePage implements OnInit {
+  image:any;
+
+  // images: ApiImage[] = [];
 
   @ViewChild('fileInput', { static: false }) fileInput: ElementRef;
-  constructor( private plt: Platform, private actionSheetCtrl: ActionSheetController) {
-   
+
+  constructor(
+    private sanitizer:DomSanitizer,
+     private plt: Platform, 
+     private actionSheetCtrl: ActionSheetController) {
+       // this.loadImages();
+    // private api: ApiService, 
+
   }
 
   ngOnInit() {
   }
-   
+     // loadImages() {
+  //   this.api.getImages().subscribe(images => {
+  //     this.images = images;
+  //   });
+  // }
   async selectImageSource() {
     const buttons = [
       {
@@ -64,17 +78,35 @@ export class ProfileHomePage implements OnInit {
  
     const blobData = this.b64toBlob(image.base64String, `image/${image.format}`);
     const imageName = 'Give me a name';
- 
-   
+    this.image ='data:image/jpeg;base64,'+ image.base64String;
+
+    
+    // this.api.uploadImage(blobData, imageName, image.format).subscribe((newImage: ApiImage) => {
+    //   this.images.push(newImage);
+    // });
+  }
+  transform(image) {
+    if(image){
+      return this.sanitizer.bypassSecurityTrustUrl(image);
+    }
   }
  
   // Used for browser direct file upload
-  uploadFile(event: EventTarget) {
-    const eventObj: MSInputMethodContext = event as MSInputMethodContext;
-    const target: HTMLInputElement = eventObj.target as HTMLInputElement;
-    const file: File = target.files[0];
-  
-  }
+  // uploadFile(event: EventTarget) {
+  //   const eventObj: MSInputMethodContext = event as MSInputMethodContext;
+  //   const target: HTMLInputElement = eventObj.target as HTMLInputElement;
+  //   const file: File = target.files[0];
+  //   this.api.uploadImageFile(file).subscribe((newImage: ApiImage) => {
+  //     this.images.push(newImage);
+  //   });
+  // }
+ 
+  // deleteImage(image: ApiImage, index) {
+  //   this.api.deleteImage(image._id).subscribe(res => {
+  //     this.images.splice(index, 1);
+  //   });
+  // }
+ 
  
  
 

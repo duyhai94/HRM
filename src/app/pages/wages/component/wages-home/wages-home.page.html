@@ -4,29 +4,47 @@
 
 <ion-content>
     <ion-grid class="wages-home-calendar">
+        <ion-row class="header-wages">
+            <ion-col size="4">
+                <p class="today" (click)="today()">
+                    Hôm nay
+                </p>
+            </ion-col>
+            <ion-col size="8" class="ion-justify-self-end">
+                <div class="head">
+                    <button (click)="slidePrev()">
+                        <ion-icon name="chevron-back-outline"></ion-icon>
+                    </button>
+                    <span>{{ viewTitle }}</span>
+                    <button (click)="slideNext()">
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </button>
+                </div>
+            </ion-col>
+        </ion-row>
         <ion-row>
             <ion-col size="12">
-                <!-- <ion-navbar>
-                    <ion-title>{{viewTitle}}</ion-title>
-                    <ion-buttons end>
-                        <button ion-button [disabled]="isToday" (click)="today()">Today</button>
-                        <button ion-button (click)="changeMode('month')">M</button>
-                        <button ion-button (click)="changeMode('week')">W</button>
-                        <button ion-button (click)="changeMode('day')">D</button>
-                        <button ion-button (click)="loadEvents()">Load Events</button>
-                    </ion-buttons>
-                </ion-navbar> -->
-            </ion-col>
-            <ion-col size="12">
-                <calendar [eventSource]="eventSource" [calendarMode]="calendar.mode" [currentDate]="calendar.currentDate" (onCurrentDateChanged)="onCurrentDateChanged($event)" (onEventSelected)="onEventSelected($event)" (onTitleChanged)="onViewTitleChanged($event)" (onTimeSelected)="onTimeSelected($event)"
-                    step="30">
+                <calendar [monthviewDisplayEventTemplate]="template" [eventSource]="eventSource" [formatDayHeader]="'EEEEE'" [calendarMode]="'month'" [currentDate]="calendar.currentDate" (onCurrentDateChanged)="onCurrentDateChanged($event)" (onTitleChanged)="onViewTitleChanged($event)"
+                    (onTimeSelected)="onTimeSelected($event)" step="30">
                 </calendar>
+                <ng-template #template let-view="view" let-row="row" let-col="col">
+                    <div (click)="presentModal(view.dates[row*7+col])">
+                        {{view.dates[row*7+col].label}}
+                        <div class="event-binding">
+                            <div *ngFor="let item of view.dates[row*7+col].events">
+                                <div *ngIf="item.type===1" class="bg-success item-circle"></div>
+                                <div *ngIf="item.type===2" class="bg-danger item-circle"></div>
+                                <div *ngIf="item.type===3" class="bg-tertiary item-circle"></div>
+                                <div *ngIf="item.type===4" class="bg-secondary item-circle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
             </ion-col>
         </ion-row>
         <ion-row class="payroll" routerLink="/main/wages/wages-payroll">
             <ion-col size="6" class="payroll-header"> Bảng lương </ion-col>
             <ion-col size="6" class="payroll-header-detail"> Chi tiết </ion-col>
-
             <ion-col size="3">
                 <img src="assets/icon/icon-wallet.svg" alt="">
             </ion-col>
@@ -44,7 +62,7 @@
 
             <ion-col size="7"></ion-col>
             <ion-col size="5">
-                <button class="button-feedback-23"> Hiện thị</button>
+                <button class="button-feedback-23"> Hiển thị</button>
             </ion-col>
         </ion-row>
     </ion-grid>

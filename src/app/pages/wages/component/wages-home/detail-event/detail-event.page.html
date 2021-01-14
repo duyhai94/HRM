@@ -1,0 +1,38 @@
+<div class="wrapper-detail">
+    <ion-header>
+        <ion-grid>
+            <ion-row>
+                <ion-col class="title" size="10">
+                    <img src="assets/icon/icon-bag.svg" alt="">
+                    <p>{{data.date | date : 'dd/MM/yyyy'}}</p>
+                </ion-col>
+                <ion-col size="2" class="close">
+                    <ion-icon (click)="dismiss()" name="close-circle"></ion-icon>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-header>
+    <ion-content>
+        <div *ngFor="let item of data.events">
+            <div *ngIf="item.type===1" class="item">
+                <div class="bg-success circle"></div>
+                <p>Nghỉ có phép</p>
+            </div>
+            <div *ngIf="item.type===2" class="item">
+                <div class="bg-danger circle"></div>
+                <p>Nghỉ không phép</p>
+            </div>
+            <div *ngIf="item.type===3" class="item">
+                <div class="bg-tertiary circle"></div>
+                <p>Đi muộn về sớm</p>
+            </div>
+            <div *ngIf="item.type===4" class="item">
+                <div class="bg-secondary circle"></div>
+                <p>Không chấm công</p>
+            </div>
+        </div>
+    </ion-content>
+    <ion-footer>
+        <div class="button-feedback feedback" routerLink="/main/wages/wages-feedback" (click)="dismiss()">Phản hồi về thông tin</div>
+    </ion-footer>
+</div>

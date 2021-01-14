@@ -40,6 +40,14 @@
     font-family: Nunito-SemiBold;
     margin-top: 10px;
     margin-bottom: 10px;
+    .ion-datetime-text {
+        font-size: 16px;
+        color: var(--ion-color-light);
+    }
+    .ion-datetime-label {
+        color: #F0DE9F;
+        text-align: center;
+    }
     .card-list-icon {
         display: flex;
         align-items: center;
@@ -126,6 +134,11 @@
 }
 
 // background gradient + card
+// yellow
+.bg-yellow {
+    background-image: linear-gradient(#C5AE38, #DCD860);
+}
+
 //xanh lá cây
 .bg-success {
     background-image: linear-gradient(#93BC6F, #B1B963);
@@ -184,4 +197,17 @@
     font-family: OpenSans-Bold;
     padding: 10px;
     background: var(--ion-color-medium);
+}
+
+.modalDayDetail {
+    .modal-shadow {
+        display: none;
+    }
+    .modal-wrapper {
+        height: 40%;
+        bottom: 0;
+        position: absolute;
+        background-color: var(--ion-card-background);
+        border-radius: 25px 25px 0 0;
+    }
 }
