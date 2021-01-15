@@ -1,9 +1,10 @@
 <ion-header class="profile">
     <app-header [headerTitle]="'Profile'"></app-header>
-    <div class="profile-avatar">
-        <!-- <img src="assets/icon/avt.jfif" alt=""> -->
-        <img class="profile-avatar-img " [src]="transform(image)" alt="">
-    </div>
+    <img class="profile-avatar-img" src="assets/icon/Avatar.jpg" alt="">
+
+
+    <!-- <img class="profile-avatar-img" alt="Avatar" [src]="transform(image)"> -->
+
 </ion-header>
 
 <div class="profile-info">
@@ -22,7 +23,6 @@
                     </div>
                 </ion-col>
                 <ion-col size="3" class="card-info-camera">
-                    <!-- <img src="assets/icon/camera.svg" alt=""> -->
                     <input type="file" #fileInput (change)="uploadFile($event)" hidden="true" accept="image/*" />
                     <ion-fab-button (click)="selectImageSource()">
                         <img src="assets/icon/camera.svg" alt="">
@@ -31,7 +31,6 @@
 
             </ion-row>
         </ion-grid>
-
     </ion-card>
     <ion-card class="card-list">
         <ion-grid>
@@ -62,7 +61,6 @@
                     <ion-icon routerLink="/main/profile/profile-work" name="chevron-forward-outline"></ion-icon>
                 </ion-col>
             </ion-row>
-
         </ion-grid>
     </ion-card>
 </div>
