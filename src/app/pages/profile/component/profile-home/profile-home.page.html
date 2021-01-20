@@ -1,9 +1,9 @@
 <ion-header class="profile">
     <app-header [headerTitle]="'Profile'"></app-header>
-    <img class="profile-avatar-img" src="assets/icon/Avatar.jpg" alt="">
+    <img *ngIf="image == null" class="profile-avatar-img" src="assets/icon/Avatar.jpg" alt="">
 
 
-    <!-- <img class="profile-avatar-img" alt="Avatar" [src]="transform(image)"> -->
+    <img *ngIf="image != null" class="profile-avatar-img" alt="Avatar" [src]="transform(image)">
 
 </ion-header>
 
@@ -24,7 +24,7 @@
                 </ion-col>
                 <ion-col size="3" class="card-info-camera">
                     <input type="file" #fileInput (change)="uploadFile($event)" hidden="true" accept="image/*" />
-                    <ion-fab-button (click)="selectImageSource()">
+                    <ion-fab-button mode="ios" (click)="selectImageSource()">
                         <img src="assets/icon/camera.svg" alt="">
                     </ion-fab-button>
                 </ion-col>

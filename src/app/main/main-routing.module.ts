@@ -24,7 +24,7 @@ const routes: Routes = [
         loadChildren:() => import('../pages/mail/mail.module').then(m => m.MailPageModule)
       },
       {
-        path: '',
+        path: 'main',
         redirectTo: '/main/home/home-center',
         pathMatch: 'full'
       }

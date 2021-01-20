@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="63" height="63" viewBox="0 0 63 63">
+  <defs>
+    <filter id="Rectangle_306" x="0" y="0" width="63" height="63" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_20364" data-name="Group 20364" transform="translate(-189.5 -616.5)">
+    <g transform="matrix(1, 0, 0, 1, 189.5, 616.5)" filter="url(#Rectangle_306)">
+      <g id="Rectangle_306-2" data-name="Rectangle 306" transform="translate(7.5 6.5)" fill="#fff" stroke="#0974df" stroke-width="0.2">
+        <rect width="48" height="48" rx="10" stroke="none"/>
+        <rect x="0.1" y="0.1" width="47.8" height="47.8" rx="9.9" fill="none"/>
+      </g>
+    </g>
+    <g id="facebook-logo" transform="translate(216.73 637.561)">
+      <path id="Path_38" data-name="Path 38" d="M32.086,0,29.591,0a4.381,4.381,0,0,0-4.614,4.734V6.917H22.469a.392.392,0,0,0-.392.392v3.163a.392.392,0,0,0,.392.392h2.508v7.981a.392.392,0,0,0,.392.392h3.273a.392.392,0,0,0,.392-.392V10.865h2.933a.392.392,0,0,0,.392-.392V7.31a.393.393,0,0,0-.392-.392H29.035V5.067c0-.889.212-1.341,1.371-1.341h1.681a.392.392,0,0,0,.392-.392V.4A.392.392,0,0,0,32.086,0Z" transform="translate(-22.077 0)" fill="#1344cc"/>
+    </g>
+  </g>
+</svg>

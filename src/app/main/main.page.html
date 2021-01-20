@@ -1,35 +1,35 @@
 <ion-tabs>
     <ion-tab-bar slot="bottom">
 
-        <ion-tab-button tab="home">
+        <ion-tab-button tab="home" (click)="activeNarbar(1)">
             <ion-icon name="grid"></ion-icon>
             <ion-label>
-                <ion-icon name="ellipse"></ion-icon>
+                <ion-icon *ngIf="select == 1" name="ellipse"></ion-icon>
             </ion-label>
         </ion-tab-button>
 
 
-        <ion-tab-button tab="wages">
+        <ion-tab-button tab="wages" (click)="activeNarbar(2)">
             <ion-icon name="time-outline"></ion-icon>
             <ion-label>
-                <ion-icon name="ellipse"></ion-icon>
+                <ion-icon *ngIf="select == 2" name="ellipse"></ion-icon>
             </ion-label>
         </ion-tab-button>
 
-        <ion-tab-button tab="mail">
+        <ion-tab-button tab="mail" (click)="activeNarbar(3)">
             <ion-icon name="reader-outline"></ion-icon>
             <ion-label>
-                <ion-icon name="ellipse"></ion-icon>
+                <ion-icon *ngIf="select == 3" name="ellipse"></ion-icon>
             </ion-label>
         </ion-tab-button>
 
 
-        <ion-tab-button tab="profile">
+        <ion-tab-button tab="profile" (click)="activeNarbar(4)">
             <ion-avatar class="ion-avatar">
                 <img src="assets/icon/Avatar.jpg">
             </ion-avatar>
             <ion-label>
-                <ion-icon name="ellipse"></ion-icon>
+                <ion-icon *ngIf="select == 4" name="ellipse"></ion-icon>
             </ion-label>
         </ion-tab-button>
     </ion-tab-bar>

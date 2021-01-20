@@ -1,17 +1,14 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
-
-import { ProfileHomePageRoutingModule } from './profile-home-routing.module';
-
-import { ProfileHomePage } from './profile-home.page';
+import { IonicModule } from '@ionic/angular';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { ProfileHomePageRoutingModule } from './profile-home-routing.module';
+import { ProfileHomePage } from './profile-home.page';
 
-import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
-import { SplashScreen } from '@ionic-native/splash-screen/ngx';
-import { StatusBar } from '@ionic-native/status-bar/ngx';
-import { RouteReuseStrategy } from '@angular/router';
+
+
+
 
 
 
@@ -24,11 +21,6 @@ import { RouteReuseStrategy } from '@angular/router';
     ProfileHomePageRoutingModule,
     SharedModule,
   ],
-  declarations: [ProfileHomePage],
-  providers: [  
-    StatusBar,
-    SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
-  ],
+  declarations: [ProfileHomePage]
 })
 export class ProfileHomePageModule {}

@@ -72,7 +72,7 @@ export class HomeLeavePage implements OnInit  {
       this.startTime = [
         setTime,
         day.options[day.selectedIndex].value,
-        month.options[day.selectedIndex].value,
+        month.options[month.selectedIndex].value,
         year.options[year.selectedIndex].value,
       ];
      
@@ -137,7 +137,7 @@ export class HomeLeavePage implements OnInit  {
       this.endTime = [
         setTime,
         day.options[day.selectedIndex].value,
-        month.options[day.selectedIndex].value,
+        month.options[month.selectedIndex].value,
         year.options[year.selectedIndex].value,
       ]
       

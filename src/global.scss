@@ -63,9 +63,10 @@
     }
     .modal-wrapper {
         z-index: 9999;
-        height: 41%;
+        height: 370px;
         top: 25%;
-        width: 90%;
+        max-width: 327px;
+        padding: 16px;
         position: absolute;
         display: block;
         border-radius: 1em;

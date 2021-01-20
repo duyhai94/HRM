@@ -61,15 +61,19 @@
 }
 
 .payroll {
-    width: 100%;
-    padding: 15px 15px 40px 15px;
+    // width: 100%;
+    // padding: 15px 15px 40px 15px;
+    margin: 0px 16px 0px 16px;
     background-image: url('../../../../../assets/icon/payroll.svg');
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
     background-position: center;
     color: var(--ion-color-light);
     outline: none;
     cursor: pointer;
+    .payroll-box {
+        padding: 25px 25px 30px 25px;
+    }
     .payroll-header {
         font-size: 16px;
         font-family: Nunito-SemiBold;
