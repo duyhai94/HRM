@@ -9,11 +9,11 @@
                     đăng nhập
                 </ion-col>
                 <form action="" class="login-forms">
-                    <input class="login-forms-input" type="text" placeholder="Số điện thoại">
-                    <input class="login-forms-input" type="text" placeholder="Mật khẩu">
+                    <input class="login-forms-input" name="account" type="text" placeholder="Số điện thoại" [(ngModel)]="getAccount">
+                    <input class="login-forms-input" name="password" type="password" placeholder="Mật khẩu" [(ngModel)]="getPassWork">
                     <div class="login-forms-group">
                         <div class="forms-save-passwork">
-                            <ion-toggle class="forms-save-passwork-button" mode="ios"></ion-toggle>
+                            <ion-toggle class="forms-save-passwork-button" (ionChange)="LoginSaveAccount($event)" mode="ios"></ion-toggle>
                             <ion-label>
                                 Lưu mật khẩu
                             </ion-label>
@@ -23,7 +23,7 @@
                         </div>
                     </div>
                     <div class="login-forms-submit">
-                        <button class="button-submit" type="submit" routerLink="/main/home">
+                        <button class="button-submit" routerLink="/main/home" (click)="buttonLogin()">
                                 Đăng nhập
                               </button>
                     </div>

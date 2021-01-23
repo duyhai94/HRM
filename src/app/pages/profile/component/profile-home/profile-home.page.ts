@@ -1,9 +1,8 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import { Plugins, CameraResultType, CameraSource } from '@capacitor/core';
-import { Platform, ActionSheetController } from '@ionic/angular';
+import { Camera, CameraOptions, PictureSourceType } from '@ionic-native/Camera/ngx';
+import { Platform, ActionSheetController } from '@ionic/angular';import { File, FileEntry } from '@ionic-native/File/ngx';
 
-const { Camera } = Plugins;
 @Component({
   selector: 'app-profile-home',
   templateUrl: './profile-home.page.html',
@@ -16,7 +15,8 @@ export class ProfileHomePage implements OnInit {
 
   @ViewChild('fileInput', { static: false }) fileInput: ElementRef;
 
-  constructor(
+  constructor(private file: File, 
+    private camera: Camera,
     private sanitizer:DomSanitizer,
      private plt: Platform, 
      private actionSheetCtrl: ActionSheetController) {
@@ -38,14 +38,14 @@ export class ProfileHomePage implements OnInit {
         text: 'Take Photo',
         icon: 'camera',
         handler: () => {
-          this.addImage(CameraSource.Camera);
+          this.addImage(this.camera.PictureSourceType.CAMERA);
         }
       },
       {
         text: 'Choose From Photos Photo',
         icon: 'image',
         handler: () => {
-          this.addImage(CameraSource.Photos);
+          this.addImage(this.camera.PictureSourceType.PHOTOLIBRARY);
         }
       }
     ];
@@ -68,47 +68,25 @@ export class ProfileHomePage implements OnInit {
     await actionSheet.present();
   }
  
-  async addImage(source: CameraSource) {
-    const image = await Camera.getPhoto({
-      quality: 60,
-      allowEditing: true,
-      resultType: CameraResultType.Base64,
-      source
-    });
- 
-    const blobData = this.b64toBlob(image.base64String, `image/${image.format}`);
-    const imageName = 'Give me a name';
-    this.image ='data:image/jpeg;base64,'+ image.base64String;
+  async addImage(source) {
 
-    
-    // this.api.uploadImage(blobData, imageName, image.format).subscribe((newImage: ApiImage) => {
-    //   this.images.push(newImage);
-    // });
+    var options: CameraOptions = {
+      quality: 100,
+      sourceType: source,
+      destinationType : 0,
+      saveToPhotoAlbum: false,
+      correctOrientation: true
+  };
+    this.camera.getPicture(options).then(imagePath => {
+    this.image ='data:image/jpeg;base64,'+ imagePath;
+    })
   }
+  
   transform(image) {
     if(image){
       return this.sanitizer.bypassSecurityTrustUrl(image);
     }
   }
- 
-  // Used for browser direct file upload
-  // uploadFile(event: EventTarget) {
-  //   const eventObj: MSInputMethodContext = event as MSInputMethodContext;
-  //   const target: HTMLInputElement = eventObj.target as HTMLInputElement;
-  //   const file: File = target.files[0];
-  //   this.api.uploadImageFile(file).subscribe((newImage: ApiImage) => {
-  //     this.images.push(newImage);
-  //   });
-  // }
- 
-  // deleteImage(image: ApiImage, index) {
-  //   this.api.deleteImage(image._id).subscribe(res => {
-  //     this.images.splice(index, 1);
-  //   });
-  // }
- 
- 
- 
 
   b64toBlob(b64Data, contentType = '', sliceSize = 512) {
     const byteCharacters = atob(b64Data);
