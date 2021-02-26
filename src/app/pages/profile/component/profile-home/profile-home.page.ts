@@ -107,6 +107,8 @@ export class ProfileHomePage implements OnInit {
     const blob = new Blob(byteArrays, { type: contentType });
     return blob;
   }
+  uploadFile(){
 
+  }
 
 }

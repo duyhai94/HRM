@@ -1,50 +1,30 @@
 <ion-app class="login">
     <ion-header class="login-header ">
-        <img class="login-header-logo" src="assets/icon/icon-id.svg" alt="">
+        <img class="login-header-logo" src="assets/icon/LogoApp.svg" alt="">
     </ion-header>
     <ion-content>
         <ion-grid class="login-center">
             <ion-row>
-                <ion-col size="12" class="login-text-header">
-                    đăng nhập
-                </ion-col>
                 <form action="" class="login-forms">
-                    <input class="login-forms-input" name="account" type="text" placeholder="Số điện thoại" [(ngModel)]="getAccount">
-                    <input class="login-forms-input" name="password" type="password" placeholder="Mật khẩu" [(ngModel)]="getPassWork">
+                    <input class="login-forms-input" name="account" placeholder="Email" [(ngModel)]="getAccount">
+                    <input class="login-forms-input" name="password" placeholder="Password" [(ngModel)]="getPassWork">
                     <div class="login-forms-group">
                         <div class="forms-save-passwork">
-                            <ion-toggle class="forms-save-passwork-button" (ionChange)="LoginSaveAccount($event)" mode="ios"></ion-toggle>
                             <ion-label>
-                                Lưu mật khẩu
+                                Lưu thông tin đăng nhập
                             </ion-label>
-                        </div>
-                        <div class="forms-forgot-password">
-                            Quên mật khẩu
+                            <ion-toggle class="forms-save-passwork-button" (ionChange)="LoginSaveAccount($event)" mode="ios"></ion-toggle>
                         </div>
                     </div>
                     <div class="login-forms-submit">
-                        <button class="button-submit" routerLink="/main/home" (click)="buttonLogin()">
+
+                        <button class="button-login" routerLink="/main/home" (click)="buttonLogin()">
                                 Đăng nhập
                               </button>
                     </div>
                 </form>
-                <ion-col size="12" class="login-change">
-                    <div class="login-change-title">
-                        Hoặc đăng nhập bằng
-                    </div>
-                    <div class="login-change-icon">
-                        <img src="assets/icon/logo-google.svg" alt="">
-                        <img src="assets/icon/logo-facebook.svg" alt="">
-                    </div>
-                </ion-col>
-                <ion-col size="12" class="login-link-sign">
-                    <div class="sign-text">
-                        Chưa có tài khoản
-                    </div>
-                    <div class="sign-link" routerLink="/index/sign">
-                        Đăng ký
-                    </div>
-
+                <ion-col size="12" class="forgot-password" (click)="forgotPassWord()">
+                    Quên mật khẩu
                 </ion-col>
             </ion-row>
         </ion-grid>

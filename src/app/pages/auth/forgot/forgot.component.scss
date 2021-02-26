@@ -1,0 +1,32 @@
+.forgot {
+    padding: 1em;
+    width: 100%;
+    .forgot-header {
+        color: var(--ion-color-light-tint);
+        text-align: center;
+        font-size: 24px;
+    }
+    .forgot-header-text {
+        font-size: 14px;
+        font-family: Nunito-SemiBold;
+        color: var(--ion-color-light-tint);
+    }
+    .forgot-input {
+        height: 45px;
+        width: 100%;
+        padding: 0px 16px;
+        border-radius: 30px;
+        outline: none;
+        border: 0.5px solid #F0DE9F;
+        background-color: var(--ion-color-medium);
+        color: var(--ion-color-light-tint);
+        &::placeholder {
+            color: var(--ion-color-light-tint);
+        }
+    }
+    .forgot-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

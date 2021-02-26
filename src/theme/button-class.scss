@@ -119,3 +119,18 @@
     outline: none;
     margin: 15px 0px;
 }
+
+.button-login {
+    border-radius: 32px;
+    color: var(--ion-color-light-contrast);
+    font-size: 16px;
+    font-family: OpenSans-Bold;
+    height: 46px;
+    width: 146px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(#93BC6F, #B1B963);
+    outline: none;
+    margin: 15px 0px;
+}
