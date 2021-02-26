@@ -4,6 +4,12 @@
     margin-bottom: 3px;
 }
 
+.button {
+    &:focus {
+        outline: none;
+    }
+}
+
 .active {
     background: red;
 }
