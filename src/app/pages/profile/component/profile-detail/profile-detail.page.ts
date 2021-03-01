@@ -19,7 +19,15 @@ export class ProfileDetailPage implements OnInit {
     public workService: WorkService
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.profileService.getDetailProfile().subscribe((res) => {
+      this.profileModer = res;
+    });
+
+    this.workService.getInfoWork().subscribe((res) => {
+      this.workModel = res;
+    });
+  }
 
   showInfo(event: number) {
     this.selected = event;
