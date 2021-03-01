@@ -2,6 +2,8 @@
 import { ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
 import { ModalController, NavController } from '@ionic/angular';
 import { CalendarComponent } from 'ionic2-calendar';
+import { SalaryListModel } from 'src/app/model/salary/salary-list.model';
+import { SalaryListService } from 'src/app/service/salary/salary-list.service';
 import { DetailEventPage } from './detail-event/detail-event.page';
 
 @Component({
@@ -12,7 +14,7 @@ import { DetailEventPage } from './detail-event/detail-event.page';
 export class WagesHomePage implements OnInit {
 
   @ViewChild(CalendarComponent, null) myCalendar: CalendarComponent;
-  constructor( public modalController: ModalController) { }
+  constructor( public modalController: ModalController, private salaryListService: SalaryListService) { }
   eventSource = [];
   viewTitle;
   isToday:boolean;
@@ -22,7 +24,11 @@ export class WagesHomePage implements OnInit {
   };
   selectedDate;
   dayDetail = false;
-  ngOnInit() {
+  detailSalary: SalaryListModel;
+  currentMonth = new Date().getMonth();
+  currentYear = new Date().getFullYear();
+  ngOnInit() {    
+    
       this.eventSource = [{
         title: 'All Day',
         startTime: new Date('01-14-2021'),
@@ -82,6 +88,17 @@ export class WagesHomePage implements OnInit {
       },
     ];
   }
+
+
+  getListSalary(){
+    let date = new Date();
+    let month = date.getMonth();
+    let year = date.getFullYear();
+    this.salaryListService.getListSalary(month, year).subscribe(res => {
+      this.detailSalary = res;
+    })
+  }
+
   onTimeSelected(ev) {}
   async presentModal(ev) {
     const modal = await this.modalController.create({

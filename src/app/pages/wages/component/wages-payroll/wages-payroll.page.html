@@ -8,19 +8,7 @@
                     Năm
                 </ion-col>
                 <ion-col size="10" class="card-list-text">
-                    <ion-select value="2020">
-                        <ion-select-option value="2010">2010</ion-select-option>
-                        <ion-select-option value="2011">2011</ion-select-option>
-                        <ion-select-option value="2012">2012</ion-select-option>
-                        <ion-select-option value="2013">2013</ion-select-option>
-                        <ion-select-option value="2014">2014</ion-select-option>
-                        <ion-select-option value="2015">2015</ion-select-option>
-                        <ion-select-option value="2016">2016</ion-select-option>
-                        <ion-select-option value="2017">2017</ion-select-option>
-                        <ion-select-option value="2018">2018</ion-select-option>
-                        <ion-select-option value="2019">2019</ion-select-option>
-                        <ion-select-option value="2020">2020</ion-select-option>
-                    </ion-select>
+                    <ion-datetime mode="ios" class="ion-datetime-label" #mydt placeholder="2021" (ionChange)="changeDate($event);" [max]="currentDate" displayFormat="YYYY" pickerFormat="YYYY"></ion-datetime>
                 </ion-col>
 
             </ion-row>
@@ -32,7 +20,7 @@
 <ion-content>
 
     <!-- month -->
-    <ion-card class="card-payroll" *ngFor=" let item of [1,2,3,4,5,6,7,8,9,10,11,12]" routerLink="/main/wages/salary-detail">
+    <ion-card class="card-payroll" *ngFor=" let item of [1,2,3,4,5,6,7,8,9,10,11,12]" routerLink="/main/wages/salary-detail" (click)="openModal(item)">
         <ion-grid>
             <ion-row>
                 <ion-col size="6" class="card-payroll-header"> Bảng lương </ion-col>
@@ -47,11 +35,44 @@
                 <ion-col size="9">
                     <div class="card-payroll-info">
                         <div class="card-payroll-info-label">Tháng:</div>
-                        <div class="card-payroll-info-text"> 04/2020</div>
+                        <div class="card-payroll-info-text"> 4/{{selectedYear}}</div>
                     </div>
                     <div class="card-payroll-info">
                         <div class="card-payroll-info-label">Thực lĩnh:</div>
                         <div class="card-payroll-info-money">** *** *** VNĐ </div>
+                    </div>
+
+                </ion-col>
+
+                <ion-col size="7"></ion-col>
+                <ion-col size="5">
+                    <button class="button-feedback-23"> Hiển thị</button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+
+    </ion-card>
+
+    <ion-card class="card-payroll" *ngFor=" let item of listSalaryOfYear; let i = index" routerLink="/main/wages/salary-detail" (click)="openModal(item)">
+        <ion-grid>
+            <ion-row>
+                <ion-col size="6" class="card-payroll-header"> Bảng lương </ion-col>
+                <ion-col size="6" class="card-payroll-header-detail"> Chi tiết </ion-col>
+
+                <ion-col size="3" class="card-payroll-icon" *ngIf="i % 2 == 0 " [class]="i == 4 || i == 8 || i == 12 ?'bg-success': 'bg-danger'">
+                    <img class="card-payroll-icon-img" src="assets/icon/wallet.svg" alt="">
+                </ion-col>
+                <ion-col size="3" class="card-payroll-icon" *ngIf="i % 2 != 0 " [class]="i == 1 || i == 5 || i == 9 ?'bg-secondary': 'bg-tertiary'">
+                    <img class="card-payroll-icon-img" src="assets/icon/wallet.svg" alt="">
+                </ion-col>
+                <ion-col size="9">
+                    <div class="card-payroll-info">
+                        <div class="card-payroll-info-label">Tháng:</div>
+                        <div class="card-payroll-info-text"> {{i}}/{{selectedYear | date:'yyyy'}}</div>
+                    </div>
+                    <div class="card-payroll-info">
+                        <div class="card-payroll-info-label">Thực lĩnh:</div>
+                        <div class="card-payroll-info-money">{{item.FinalAmount}} VNĐ </div>
                     </div>
 
                 </ion-col>
