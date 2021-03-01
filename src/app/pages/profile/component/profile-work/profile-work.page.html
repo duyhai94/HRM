@@ -17,7 +17,7 @@
                                 <img src="assets/icon/icon-profile.svg" alt="">
                             </ion-col>
                             <ion-col size="8" class="card-list-text">
-                                Designer
+                                {{workModel?.DepartmentName}}
                             </ion-col>
                             <ion-col size="2" class="card-list-button" (click)="showInfo()">
                                 <ion-icon name="chevron-down-outline" *ngIf="selected == false"></ion-icon>
@@ -27,16 +27,16 @@
                         </ion-row>
                         <ion-row *ngIf="selected == true">
                             <ion-col class="card-list-info-label" size="4">Mức lương</ion-col>
-                            <ion-col class="card-list-info-text" size="8">10.000.000 VNĐ</ion-col>
+                            <ion-col class="card-list-info-text" size="8">{{workModel?.BaseSalary | currency:'VND':'VNĐ'}}</ion-col>
 
                             <ion-col class="card-list-info-label" size="4">Hiệu lực</ion-col>
-                            <ion-col class="card-list-info-text" size="8">22/04/2020</ion-col>
+                            <ion-col class="card-list-info-text" size="8">{{workModel?.StartDate}}</ion-col>
 
                             <ion-col class="card-list-info-label" size="4">Chức vụ</ion-col>
-                            <ion-col class="card-list-info-text" size="8">Designer</ion-col>
+                            <ion-col class="card-list-info-text" size="8">{{workModel?.PositionName}}</ion-col>
 
                             <ion-col class="card-list-info-label" size="4">Phòng ban</ion-col>
-                            <ion-col class="card-list-info-text" size="8">Thiết kế</ion-col>
+                            <ion-col class="card-list-info-text" size="8">{{workModel?.DepartmentName}} </ion-col>
                         </ion-row>
                     </ion-grid>
                 </ion-card>

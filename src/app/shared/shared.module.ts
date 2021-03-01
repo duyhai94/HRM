@@ -5,8 +5,8 @@ import { HeaderDetailComponent } from "./header-detail/header-detail.component";
 import { IonicModule } from "@ionic/angular";
 import { HeaderCardComponent } from "./header-card/header-card.component";
 import { FeedbackComponent } from "./feedback/feedback.component";
-import { FormsModule } from "@angular/forms";
-import localeVi from '@angular/common/locales/vi';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import localeVi from "@angular/common/locales/vi";
 import { SalaryDetailPage } from "../pages/wages/component/salary-detail/salary-detail.page";
 
 registerLocaleData(localeVi);
@@ -19,15 +19,18 @@ registerLocaleData(localeVi);
     FeedbackComponent,
     SalaryDetailPage
   ],
-  imports: [CommonModule, IonicModule, FormsModule],
+  imports: [CommonModule, IonicModule, FormsModule, ReactiveFormsModule],
   exports: [
     HeaderComponent,
     HeaderDetailComponent,
     HeaderCardComponent,
     FeedbackComponent,SalaryDetailPage
   ],
-  providers: [{
-    provide: LOCALE_ID, useValue:"vi-VN"
-  }]
+  providers: [
+    {
+      provide: LOCALE_ID,
+      useValue: "vi-VN",
+    },
+  ],
 })
 export class SharedModule {}

@@ -1,17 +1,17 @@
+import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
-import { HttpClient } from "@angular/common/http";
 import { map } from "rxjs/operators";
-import { ProfileModel } from "src/app/model/profile/profile.model";
+import { WorkModel } from "src/app/model/work/work.model";
 
 @Injectable({
   providedIn: "root",
 })
-export class ProfileService {
+export class WorkService {
   constructor(public http: HttpClient) {}
-  getDetailProfile(): Observable<ProfileModel> {
+  getInfoWork(): Observable<WorkModel> {
     return this.http
-      .get("/api/Employee/username")
+      .get("/api/CompanyEmployee/username")
       .pipe(map((payload: any) => payload.Payload));
   }
 }

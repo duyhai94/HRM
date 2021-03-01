@@ -1,9 +1,9 @@
 export class ProfileModel {
   EmployeeId: number; //id nhân viên
   UserprofileId: number; // id profile nhân viên
-  EmployeeCode: string;
+  EmployeeCode: string; //mã nv
   MediaURL: string; //anh đại diện
-  lastName: string; //tên nv
+  LastName: string; //tên nv
   Gender: number;
   DOB: string;
   Phone: string;
