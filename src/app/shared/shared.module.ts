@@ -5,7 +5,7 @@ import { HeaderDetailComponent } from "./header-detail/header-detail.component";
 import { IonicModule } from "@ionic/angular";
 import { HeaderCardComponent } from "./header-card/header-card.component";
 import { FeedbackComponent } from "./feedback/feedback.component";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -14,7 +14,7 @@ import { FormsModule } from "@angular/forms";
     HeaderCardComponent,
     FeedbackComponent,
   ],
-  imports: [CommonModule, IonicModule, FormsModule],
+  imports: [CommonModule, IonicModule, FormsModule, ReactiveFormsModule],
   exports: [
     HeaderComponent,
     HeaderDetailComponent,
