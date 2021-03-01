@@ -6,7 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mail-home.page.scss'],
 })
 export class MailHomePage implements OnInit {
-
+  fakeData = [
+    {
+      Date: new Date(),
+      Title: 'Đề xuất quy trình làm việc',
+      Content: 'ABC',
+      Status: 1
+    },
+    {
+      Date: new Date(),
+      Title: 'Đề xuất quy trình làm việc',
+      Content: 'ABC',
+      Status: 2
+    }
+  ]
   constructor() { }
 
   ngOnInit() {
