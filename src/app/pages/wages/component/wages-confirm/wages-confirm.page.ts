@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-wages-confirm',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WagesConfirmPage implements OnInit {
   selected: boolean = false;
+  @Input() data;
   constructor() { }
 
   ngOnInit() {

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IonRouterOutlet } from '@ionic/angular';
+import { IonRouterOutlet, ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-header-detail',
@@ -8,10 +8,15 @@ import { IonRouterOutlet } from '@ionic/angular';
 })
 export class HeaderDetailComponent implements OnInit {
   @Input() headerTitle;
-  constructor(private routerOutlet: IonRouterOutlet) { }
+  @Input() isModal;
+  constructor(private modalController: ModalController) { }
 
   ngOnInit() {
     // this.routerOutlet.b
+  }
+
+  closeModal(){
+    this.modalController.dismiss();
   }
 
 }

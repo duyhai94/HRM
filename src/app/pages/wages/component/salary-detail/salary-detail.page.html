@@ -1,5 +1,5 @@
 <ion-header>
-    <app-header-detail [headerTitle]="'Chi tiết lương'"></app-header-detail>
+    <app-header-detail [headerTitle]="'Chi tiết lương'" [isModal]="true"></app-header-detail>
     <!-- year -->
     <ion-card class="card-list">
         <ion-grid>
@@ -8,19 +8,7 @@
                     Năm
                 </ion-col>
                 <ion-col size="10" class="card-list-text">
-                    <ion-select value="2020">
-                        <ion-select-option value="2010">2010</ion-select-option>
-                        <ion-select-option value="2011">2011</ion-select-option>
-                        <ion-select-option value="2012">2012</ion-select-option>
-                        <ion-select-option value="2013">2013</ion-select-option>
-                        <ion-select-option value="2014">2014</ion-select-option>
-                        <ion-select-option value="2015">2015</ion-select-option>
-                        <ion-select-option value="2016">2016</ion-select-option>
-                        <ion-select-option value="2017">2017</ion-select-option>
-                        <ion-select-option value="2018">2018</ion-select-option>
-                        <ion-select-option value="2019">2019</ion-select-option>
-                        <ion-select-option value="2020">2020</ion-select-option>
-                    </ion-select>
+                    <ion-datetime mode="ios" class="ion-datetime-label" #mydt placeholder="2021" (ionChange)="changeDate($event);" [max]="currentDate" displayFormat="YYYY" pickerFormat="YYYY"></ion-datetime>
                 </ion-col>
 
             </ion-row>
@@ -117,10 +105,10 @@
     <ion-grid>
         <ion-row>
             <ion-col>
-                <button routerLink="/main/wages/wages-feedback" class="button-feedback ">Phản hồi</button>
+                <button (click)="openModalFeedback()" class="button-feedback ">Phản hồi</button>
             </ion-col>
             <ion-col>
-                <button routerLink="/main/wages/wages-confirm" class="button-primary">Xác nhận</button>
+                <button (click)="openModalConfirm()" class="button-primary">Xác nhận</button>
             </ion-col>
         </ion-row>
     </ion-grid>
