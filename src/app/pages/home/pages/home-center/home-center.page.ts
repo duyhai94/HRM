@@ -17,12 +17,13 @@ export class HomeCenterPage implements OnInit {
   currentMonth: number = new Date().getMonth() + 1;
   currentYear: number = new Date().getFullYear();
   //time today
-  today = new Date();
-  todaysDataTime = "";
+  public today: number = Date.now();
   constructor(
     public modalService: ModalService,
     private timeService: TimeKeepingService
-  ) {}
+  ) {
+    this.startTime();
+  }
 
   ngOnInit() {
     this.timeService
@@ -30,7 +31,6 @@ export class HomeCenterPage implements OnInit {
       .subscribe((res) => {
         this.timeKeepingModal = res;
       });
-    this.getTime();
   }
   timeKeeping() {
     this.modalService.TimeKeepingModal();
@@ -38,12 +38,12 @@ export class HomeCenterPage implements OnInit {
       this.modalService.CloseModal();
     }, 3000);
   }
-  async getTime() {
-    this.todaysDataTime = formatDate(
-      this.today,
-      "dd-MM-yyyy hh:mm:ss a",
-      "vi-VN",
-      "+7"
+  startTime() {
+    var intervalVar = setInterval(
+      function () {
+        this.today = new Date().toISOString();
+      }.bind(this),
+      500
     );
   }
 }
