@@ -1,27 +1,35 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import { ProfileModel } from "src/app/model/profile/profile.model";
+import { WorkModel } from "src/app/model/work/work.model";
+import { ProfileService } from "src/app/service/profile/profile.service";
+import { WorkService } from "src/app/service/work/work.service";
 
 @Component({
-  selector: 'app-profile-detail',
-  templateUrl: './profile-detail.page.html',
-  styleUrls: ['./profile-detail.page.scss'],
+  selector: "app-profile-detail",
+  templateUrl: "./profile-detail.page.html",
+  styleUrls: ["./profile-detail.page.scss"],
 })
 export class ProfileDetailPage implements OnInit {
   selected: number;
+  profileModer: ProfileModel;
+  workModel: WorkModel;
 
-
-  constructor() { }
+  constructor(
+    public profileService: ProfileService,
+    public workService: WorkService
+  ) {}
 
   ngOnInit() {
+    this.profileService.getDetailProfile().subscribe((res) => {
+      this.profileModer = res;
+    });
+
+    this.workService.getInfoWork().subscribe((res) => {
+      this.workModel = res;
+    });
   }
 
-  showInfo( event : number){
+  showInfo(event: number) {
     this.selected = event;
-  
-    
-    
-
-   
-    
-
   }
 }
