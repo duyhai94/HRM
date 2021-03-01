@@ -8,6 +8,7 @@ import { WagesPayrollPageRoutingModule } from './wages-payroll-routing.module';
 
 import { WagesPayrollPage } from './wages-payroll.page';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { SalaryDetailPage } from '../salary-detail/salary-detail.page';
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
     IonicModule,
     WagesPayrollPageRoutingModule,
     SharedModule,
+
   ],
   declarations: [WagesPayrollPage]
 })
