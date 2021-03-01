@@ -54,11 +54,12 @@
             <ion-col size="9">
                 <div class="payroll-info">
                     <div class="payroll-info-label">Tháng:</div>
-                    <div class="payroll-info-text"> 04/2020</div>
+                    <div class="payroll-info-text"> {{currentMonth}}/{{currentYear}}</div>
                 </div>
                 <div class=" payroll-info">
                     <div class="payroll-info-label">Thực lĩnh:</div>
-                    <div class="payroll-info-text">** *** *** VNĐ </div>
+                    <div class="payroll-info-text"> {{20000000 | currency:'VND':'VNĐ' }} </div>
+                    <!-- {{detailSalary.FinalAmount}} -->
                 </div>
 
             </ion-col>

@@ -15,7 +15,7 @@
                         <img class="card-statistics-header-icon" src="assets/icon/icon-info.svg" alt=""> Ngày công
                     </div>
                     <div class="card-statistics-day">
-                        22
+                        {{timeKeepingModal?.DailyEmployeeShiftCount}}
                     </div>
                 </ion-card>
             </ion-col>
@@ -25,7 +25,7 @@
                         <img class="card-statistics-header-icon" src="assets/icon/statistics3.svg" alt=""> Không phép
                     </div>
                     <div class="card-statistics-day">
-                        02
+                        {{timeKeepingModal?.AbsentCount}}
                     </div>
                 </ion-card>
             </ion-col>
@@ -35,7 +35,7 @@
                         <img class="card-statistics-header-icon" src="assets/icon/statistics1.svg" alt=""> Sớm, muộn
                     </div>
                     <div class="card-statistics-day">
-                        22
+                        {{timeKeepingModal?.LateEarlycount}}
                     </div>
                 </ion-card>
             </ion-col>
@@ -45,7 +45,7 @@
                         <img class="card-statistics-header-icon" src="assets/icon/statistics2.svg" alt=""> Có phép
                     </div>
                     <div class="card-statistics-day">
-                        22
+                        {{timeKeepingModal?.LeavesCount}}
                     </div>
                 </ion-card>
             </ion-col>
@@ -57,7 +57,10 @@
     <ion-card class="card-check-in">
         <div class="card-check-info">
             <div class="card-check-info-text">
-                <div> <img class="card-check-info-icon" src="assets/icon/chevron_right.svg" alt=""> 09:00 AM</div>
+                <div> <img class="card-check-info-icon" src="assets/icon/chevron_right.svg" alt="">
+                    <!-- 09:00 AM -->
+                    {{todaysDataTime}}
+                </div>
                 <div> <img class="card-check-info-icon" src="assets/icon/wiffi.svg" alt=""> Consult Indochina</div>
                 <div> <img class="card-check-info-icon" src="assets/icon/location.svg" alt=""> Tầng 4, N03-T7 , Ng...</div>
             </div>
