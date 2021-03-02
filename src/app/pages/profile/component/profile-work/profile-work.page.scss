@@ -16,3 +16,20 @@
     background-position: top;
     background-position-x: 32px;
 }
+
+.profile-work-timeline {
+    list-style: none;
+    outline: none;
+    width: 100%;
+    padding: 0px;
+    .profile-work-timeline-card {
+        width: 100%;
+        display: flex;
+        .pw-timeline-card-icon {
+            width: 10%;
+        }
+        .pw-timeline-card-content {
+            width: 90%;
+        }
+    }
+}

@@ -3,13 +3,13 @@
 </ion-header>
 
 <ion-content>
+    <!-- khi có API cần viết lại functin để đóng mở card  -->
+    <ul class="profile-work-timeline" *ngFor="let item of [0,1,2,3,4]">
+        <li class="profile-work-timeline-card">
+            <div class="pw-timeline-card-icon ">
 
-    <ion-grid>
-        <ion-row>
-            <ion-col size="2" class="profile-work-icon-line">
-
-            </ion-col>
-            <ion-col size="10">
+            </div>
+            <div class="pw-timeline-card-content">
                 <ion-card class="card-list">
                     <ion-grid>
                         <ion-row>
@@ -21,7 +21,6 @@
                             </ion-col>
                             <ion-col size="2" class="card-list-button" (click)="showInfo()">
                                 <ion-icon name="chevron-down-outline" *ngIf="selected == false"></ion-icon>
-                                <!-- hide -->
                                 <ion-icon name="chevron-up-outline" *ngIf="selected == true"></ion-icon>
                             </ion-col>
                         </ion-row>
@@ -40,34 +39,7 @@
                         </ion-row>
                     </ion-grid>
                 </ion-card>
-            </ion-col>
-
-
-            <ion-col size="2" class="profile-work-icon">
-                <img src="assets/icon/person2.svg" alt="">
-            </ion-col>
-            <ion-col size="10">
-                <ion-card class="card-list">
-                    <ion-grid>
-                        <ion-row>
-                            <ion-col size="2" class="card-list-icon">
-                                <img src="assets/icon/icon-profile.svg" alt="">
-                            </ion-col>
-                            <ion-col size="8" class="card-list-text">
-                                Intern
-                            </ion-col>
-                            <ion-col size="2" class="card-list-button">
-                                <ion-icon name="chevron-down-outline"></ion-icon>
-                            </ion-col>
-                        </ion-row>
-
-                    </ion-grid>
-                </ion-card>
-            </ion-col>
-        </ion-row>
-    </ion-grid>
-
-
-
-
+            </div>
+        </li>
+    </ul>
 </ion-content>
