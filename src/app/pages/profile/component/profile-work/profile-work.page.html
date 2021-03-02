@@ -4,42 +4,35 @@
 
 <ion-content>
     <!-- khi có API cần viết lại functin để đóng mở card  -->
-    <ul class="profile-work-timeline" *ngFor="let item of [0,1,2,3,4]">
-        <li class="profile-work-timeline-card">
-            <div class="pw-timeline-card-icon ">
+    <div class="profile-work-timeline" *ngFor="let item of [0,1,2,3,4,5]">
+        <ion-card class="card-list">
+            <ion-grid>
+                <ion-row>
+                    <ion-col size="2" class="card-list-icon">
+                        <img src="assets/icon/icon-profile.svg" alt="">
+                    </ion-col>
+                    <ion-col size="8" class="card-list-text">
+                        {{workModel?.DepartmentName}}
+                    </ion-col>
+                    <ion-col size="2" class="card-list-button" (click)="showInfo()">
+                        <ion-icon name="chevron-down-outline" *ngIf="selected == false"></ion-icon>
+                        <ion-icon name="chevron-up-outline" *ngIf="selected == true"></ion-icon>
+                    </ion-col>
+                </ion-row>
+                <ion-row *ngIf="selected == true">
+                    <ion-col class="card-list-info-label" size="4">Mức lương</ion-col>
+                    <ion-col class="card-list-info-text" size="8">{{workModel?.BaseSalary | currency:'VND':'VNĐ'}}</ion-col>
 
-            </div>
-            <div class="pw-timeline-card-content">
-                <ion-card class="card-list">
-                    <ion-grid>
-                        <ion-row>
-                            <ion-col size="2" class="card-list-icon">
-                                <img src="assets/icon/icon-profile.svg" alt="">
-                            </ion-col>
-                            <ion-col size="8" class="card-list-text">
-                                {{workModel?.DepartmentName}}
-                            </ion-col>
-                            <ion-col size="2" class="card-list-button" (click)="showInfo()">
-                                <ion-icon name="chevron-down-outline" *ngIf="selected == false"></ion-icon>
-                                <ion-icon name="chevron-up-outline" *ngIf="selected == true"></ion-icon>
-                            </ion-col>
-                        </ion-row>
-                        <ion-row *ngIf="selected == true">
-                            <ion-col class="card-list-info-label" size="4">Mức lương</ion-col>
-                            <ion-col class="card-list-info-text" size="8">{{workModel?.BaseSalary | currency:'VND':'VNĐ'}}</ion-col>
+                    <ion-col class="card-list-info-label" size="4">Hiệu lực</ion-col>
+                    <ion-col class="card-list-info-text" size="8">{{workModel?.StartDate}}</ion-col>
 
-                            <ion-col class="card-list-info-label" size="4">Hiệu lực</ion-col>
-                            <ion-col class="card-list-info-text" size="8">{{workModel?.StartDate}}</ion-col>
+                    <ion-col class="card-list-info-label" size="4">Chức vụ</ion-col>
+                    <ion-col class="card-list-info-text" size="8">{{workModel?.PositionName}}</ion-col>
 
-                            <ion-col class="card-list-info-label" size="4">Chức vụ</ion-col>
-                            <ion-col class="card-list-info-text" size="8">{{workModel?.PositionName}}</ion-col>
-
-                            <ion-col class="card-list-info-label" size="4">Phòng ban</ion-col>
-                            <ion-col class="card-list-info-text" size="8">{{workModel?.DepartmentName}} </ion-col>
-                        </ion-row>
-                    </ion-grid>
-                </ion-card>
-            </div>
-        </li>
-    </ul>
+                    <ion-col class="card-list-info-label" size="4">Phòng ban</ion-col>
+                    <ion-col class="card-list-info-text" size="8">{{workModel?.DepartmentName}} </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-card>
+    </div>
 </ion-content>
