@@ -16,7 +16,8 @@ export class ProfileDetailPage implements OnInit {
   //toggle button
   overview: boolean = true;
   contact: boolean = true;
-
+  finance: boolean = true;
+  address: boolean = true;
   constructor(
     public profileService: ProfileService,
     public workService: WorkService
@@ -38,10 +39,10 @@ export class ProfileDetailPage implements OnInit {
   showContactProfile() {
     this.contact = !this.contact;
   }
-  // showOverviewProfile() {
-  //   this.overview = !this.overview;
-  // }
-  // showOverviewProfile() {
-  //   this.overview = !this.overview;
-  // }
+  showFinanceProfile() {
+    this.finance = !this.finance;
+  }
+  showAddressProfile() {
+    this.address = !this.address;
+  }
 }
