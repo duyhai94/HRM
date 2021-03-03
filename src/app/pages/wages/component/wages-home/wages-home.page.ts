@@ -94,7 +94,7 @@ export class WagesHomePage implements OnInit {
     let date = new Date();
     let month = date.getMonth();
     let year = date.getFullYear();
-    this.salaryListService.getListSalary(month, year).subscribe(res => {
+    this.salaryListService.getListSalary(month, year).subscribe((res) => {
       this.detailSalary = res;
     })
   }

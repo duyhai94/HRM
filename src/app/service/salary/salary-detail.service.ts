@@ -14,4 +14,9 @@ export class SalaryDetailService {
   getSalaryDetail(id): Observable<SalaryDetailModel>{
     return this.http.get(`/api/MonthlySalary/${id}`).pipe(map((payload: any)=> payload.PayLoad));
   }
+
+
+  updateSalaryDetaul(id, data): Observable<SalaryDetailModel>{
+    return this.http.put(`api/MonthlySalary/${id}`, data).pipe(map((payLoad:any)=> payLoad.PayLoad));
+  }
 }
