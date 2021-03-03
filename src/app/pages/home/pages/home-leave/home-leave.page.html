@@ -36,19 +36,19 @@
     <ion-list lines="none">
         <ion-item>
             <ion-label>Từ:</ion-label>
-            <ion-datetime placeholder="02-Mar-2020" display-format="DD-MMM-YYYY" picker-format="DD-MMM-YYYY"></ion-datetime>
+            <ion-datetime mode="ios" placeholder="2020-03-15" display-format="YYYY-MM-DD" picker-format="YYYY-MM-DD"></ion-datetime>
         </ion-item>
         <ion-item>
             <ion-label>Thời gian</ion-label>
-            <ion-datetime placeholder="08 AM" display-format="h A" picker-format="h A"></ion-datetime>
+            <ion-datetime mode="ios" placeholder="08 AM" display-format="h A" picker-format="h A"></ion-datetime>
         </ion-item>
         <ion-item>
             <ion-label>Đến</ion-label>
-            <ion-datetime placeholder="02-Mar-2020" display-format="DD-MMM-YYYY" picker-format="DD-MMM-YYYY"></ion-datetime>
+            <ion-datetime mode="ios" placeholder="2020-03-15" display-format="YYYY-MM-DD" picker-format="YYYY-MM-DD"></ion-datetime>
         </ion-item>
         <ion-item>
             <ion-label>Thời gian</ion-label>
-            <ion-datetime placeholder="03 PM" display-format="h A" picker-format="h A"></ion-datetime>
+            <ion-datetime mode="ios" placeholder="03 PM" display-format="h A" picker-format="h A"></ion-datetime>
         </ion-item>
 
     </ion-list>
@@ -58,14 +58,14 @@
                 Nội dung
             </ion-col>
             <ion-col size="12 ">
-                <ion-textarea rows="5 " class="input-content " placeholder="Nhập nội dung.... " [(ngModel)]="Description"></ion-textarea>
+                <ion-textarea rows="5 " class="input-content " placeholder="Nhập nội dung.... " [(ngModel)]="description"></ion-textarea>
             </ion-col>
             <ion-col size="12 " class="home-leave-input-day ">
                 <img src="assets/icon/icon-home-leave-day.svg " alt=" ">
                 <div>Phép năm còn lại: 5/12 ngày</div>
             </ion-col>
             <ion-col size="12 ">
-                <button class="button-primary "> Gửi đơn</button>
+                <button class="button-primary" (click)="sendForm()"> Gửi đơn</button>
             </ion-col>
         </ion-row>
     </ion-grid>

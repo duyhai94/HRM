@@ -16,6 +16,7 @@ export class ProfileDetailPage implements OnInit {
   //toggle button
   overview: boolean = true;
   contact: boolean = true;
+
   constructor(
     public profileService: ProfileService,
     public workService: WorkService

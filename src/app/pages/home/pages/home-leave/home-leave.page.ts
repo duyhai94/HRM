@@ -7,8 +7,20 @@ import { LeaveModel } from "src/app/model/leave/leave.model";
   styleUrls: ["./home-leave.page.scss"],
 })
 export class HomeLeavePage implements OnInit {
-  Description: any;
+  description: any;
   leaveModel: LeaveModel;
+  startDate: any;
+  startTime: any;
+  endDate: any;
+  endTime: any;
   constructor() {}
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(this.sendForm());
+  }
+
+  sendForm() {
+    this.leaveModel.Description = this.description;
+    this.leaveModel.StartTime = this.startDate;
+    this.leaveModel.EndTime = this.endDate;
+  }
 }
