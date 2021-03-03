@@ -1,29 +1,58 @@
 <ion-app class="login">
     <ion-header class="login-header ">
-        <img class="login-header-logo" src="assets/icon/LogoApp.svg" alt="">
+        <img
+            class="login-header-logo"
+            src="assets/icon/LogoApp.svg"
+            alt=""
+        >
     </ion-header>
     <ion-content>
         <ion-grid class="login-center">
             <ion-row>
-                <form action="" class="login-forms">
-                    <input class="login-forms-input" name="account" placeholder="Email" [(ngModel)]="getAccount">
-                    <input class="login-forms-input" name="password" placeholder="Password" [(ngModel)]="getPassWork">
+                <form
+                    action=""
+                    class="login-forms"
+                >
+                    <input
+                        class="login-forms-input"
+                        name="account"
+                        placeholder="Email"
+                        [(ngModel)]="model.username"
+                    >
+                    <input
+                        class="login-forms-input"
+                        name="password"
+                        placeholder="Password"
+                        [(ngModel)]="model.password"
+                    >
                     <div class="login-forms-group">
                         <div class="forms-save-passwork">
                             <ion-label>
                                 Lưu thông tin đăng nhập
                             </ion-label>
-                            <ion-toggle class="forms-save-passwork-button" (ionChange)="LoginSaveAccount($event)" mode="ios"></ion-toggle>
+                            <ion-toggle
+                                class="forms-save-passwork-button"
+                                (ionChange)="LoginSaveAccount($event)"
+                                mode="ios"
+                            ></ion-toggle>
                         </div>
                     </div>
                     <div class="login-forms-submit">
 
-                        <button class="button-login" routerLink="/main/home" (click)="buttonLogin()">
-                                Đăng nhập
-                              </button>
+                        <button
+                            class="button-login"
+                            routerLink="/main/home"
+                            (click)="buttonLogin()"
+                        >
+                            Đăng nhập
+                        </button>
                     </div>
                 </form>
-                <ion-col size="12" class="forgot-password" (click)="forgotPassWord()">
+                <ion-col
+                    size="12"
+                    class="forgot-password"
+                    (click)="forgotPassWord()"
+                >
                     Quên mật khẩu
                 </ion-col>
             </ion-row>

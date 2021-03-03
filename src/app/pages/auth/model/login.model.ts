@@ -1,5 +1,5 @@
-export interface Login {
-          account: string;
-          passWork: string;
-          savePassWork: boolean
+export class Login {
+    account: string;
+    password: string;
+    savePassWork: boolean
 }
