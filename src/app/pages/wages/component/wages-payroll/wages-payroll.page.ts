@@ -19,13 +19,18 @@ export class WagesPayrollPage implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.getListSalayOfMonth(this.selectedYear);
+    this.getListSalayOfYear(this.selectedYear);
   }
+  
+
+  //Change selected year
   changeDate(e) {
     let date = new Date(e.detail.value);
     this.selectedYear = date.getFullYear();
-    this.getListSalayOfMonth(this.selectedYear)
+    this.getListSalayOfYear(this.selectedYear)
   }
+
+  // open modal detail Salary
   async openModal(item) {
     console.log(item);
 
@@ -39,7 +44,9 @@ export class WagesPayrollPage implements OnInit {
     await modal.present();
   }
 
-  getListSalayOfMonth(year) {
+
+  //get list salary of year
+  getListSalayOfYear(year) {
     this.salaryListService
       .getListSalaryOfYear(year)
       .subscribe((res) => {

@@ -77,9 +77,6 @@ export class SalaryDetailPage implements OnInit {
       },
     });
     await modal.present();
-
-    
   }
   
-
 }
