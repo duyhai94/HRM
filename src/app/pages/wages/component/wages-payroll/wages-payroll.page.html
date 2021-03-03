@@ -68,11 +68,11 @@
                 <ion-col size="9">
                     <div class="card-payroll-info">
                         <div class="card-payroll-info-label">Tháng:</div>
-                        <div class="card-payroll-info-text"> {{i}}/{{selectedYear | date:'yyyy'}}</div>
+                        <div class="card-payroll-info-text"> {{item?.CreatedOn | date:'MM/YYYY'}}</div>
                     </div>
                     <div class="card-payroll-info">
                         <div class="card-payroll-info-label">Thực lĩnh:</div>
-                        <div class="card-payroll-info-money">{{item.FinalAmount}} VNĐ </div>
+                        <div class="card-payroll-info-money">{{item?.FinalAmount}} VNĐ </div>
                     </div>
 
                 </ion-col>
