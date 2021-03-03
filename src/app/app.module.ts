@@ -13,7 +13,7 @@ import { FilePath } from "@ionic-native/file-path/ngx";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { SharedModule } from "./shared/shared.module";
-import { CommonModule } from "@angular/common";
+import { CommonModule, DatePipe } from "@angular/common";
 import { ForgotComponent } from "./pages/auth/forgot/forgot.component";
 import { FormsModule } from "@angular/forms";
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
@@ -42,21 +42,11 @@ import { HandleErrorService } from "./shared/service/handle-error.service";
     File,
     WebView,
     FilePath,
-
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+
     {
       provide: HTTP_INTERCEPTORS,
       useClass: APIInterceptor,
-      multi: true,
-    },
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: LoaderInterceptor,
-      multi: true,
-    },
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: HandleErrorService,
       multi: true,
     },
   ],

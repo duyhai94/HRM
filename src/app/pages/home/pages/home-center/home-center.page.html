@@ -59,7 +59,8 @@
             <div class="card-check-info-text">
                 <div> <img class="card-check-info-icon" src="assets/icon/chevron_right.svg" alt="">
                     <!-- 09:00 AM -->
-                    {{today}}
+                    {{ time$ | async | date: 'hh:mm a' }}
+
                 </div>
                 <div> <img class="card-check-info-icon" src="assets/icon/wiffi.svg" alt=""> Consult Indochina</div>
                 <div> <img class="card-check-info-icon" src="assets/icon/location.svg" alt=""> Tầng 4, N03-T7 , Ng...</div>

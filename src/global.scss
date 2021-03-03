@@ -118,26 +118,10 @@ ion-select {
 
 .picker-opt {
     color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 14px;
 }
 
 .picker-wrapper.sc-ion-picker-ios {
-    border-radius: 20px 20px 0px 0px;
     background-color: #292929;
-}
-
-.picker-opt-selected {
-    background-color: rgba($color: #F0DE9F, $alpha: 0.5);
-    border-radius: 7px;
-    height: 35px;
-    margin-top: 4px;
-}
-
-.picker-col {
-    max-width: 70px !important;
 }
 
 //****camera
