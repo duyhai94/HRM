@@ -36,19 +36,19 @@
     <ion-list lines="none">
         <ion-item>
             <ion-label>Từ:</ion-label>
-            <ion-datetime mode="ios" placeholder="2020-03-15" display-format="YYYY-MM-DD" picker-format="YYYY-MM-DD"></ion-datetime>
+            <ion-datetime mode="ios" placeholder="2020-03-15" display-format=" YYYY-MM-DD" (ionChange)="onDateChange($event)" picker-format="YYYY-MM-DD" [(ngModel)]="startDate"></ion-datetime>
         </ion-item>
         <ion-item>
             <ion-label>Thời gian</ion-label>
-            <ion-datetime mode="ios" placeholder="08 AM" display-format="h A" picker-format="h A"></ion-datetime>
+            <ion-datetime mode="ios" placeholder="08 AM" display-format="H A" picker-format="H A" [(ngModel)]="startTime"></ion-datetime>
         </ion-item>
         <ion-item>
             <ion-label>Đến</ion-label>
-            <ion-datetime mode="ios" placeholder="2020-03-15" display-format="YYYY-MM-DD" picker-format="YYYY-MM-DD"></ion-datetime>
+            <ion-datetime mode="ios" placeholder="2020-03-15" display-format="YYYY-MM-DD" picker-format="YYYY-MM-DD" (ionChange)="onEndDateChange($event)" [(ngModel)]="endDate"></ion-datetime>
         </ion-item>
         <ion-item>
             <ion-label>Thời gian</ion-label>
-            <ion-datetime mode="ios" placeholder="03 PM" display-format="h A" picker-format="h A"></ion-datetime>
+            <ion-datetime mode="ios" placeholder="03 PM" display-format="H A" picker-format="H A" [(ngModel)]="endTime"></ion-datetime>
         </ion-item>
 
     </ion-list>

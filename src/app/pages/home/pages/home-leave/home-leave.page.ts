@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { LeaveModel } from "src/app/model/leave/leave.model";
+import { LeaveService } from "src/app/service/leave/leave.service";
 
 @Component({
   selector: "app-home-leave",
@@ -13,14 +14,25 @@ export class HomeLeavePage implements OnInit {
   startTime: any;
   endDate: any;
   endTime: any;
-  constructor() {}
-  ngOnInit() {
-    console.log(this.sendForm());
-  }
+  constructor(private leaveService: LeaveService) {}
+  ngOnInit() {}
 
+  getlistLeave(LeavecategoryId: number) {
+    this.leaveService.getListLeave(LeavecategoryId);
+  }
   sendForm() {
-    this.leaveModel.Description = this.description;
-    this.leaveModel.StartTime = this.startDate;
-    this.leaveModel.EndTime = this.endDate;
+    this.leaveModel = {
+      LeavecategoryId: 1,
+      Description: this.description,
+      StartTime: this.startTime,
+      EndTime: this.endTime,
+    };
+    console.log(this.leaveModel);
+  }
+  onDateChange(ev) {
+    this.startTime = ev.detail.value;
+  }
+  onEndDateChange(ev) {
+    this.endTime = ev.detail.value;
   }
 }

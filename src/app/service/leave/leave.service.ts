@@ -18,4 +18,11 @@ export class LeaveService extends BaseService<LeaveModel> {
       .post("/api/DailyEmployeeleave/username", data)
       .pipe(map((res: any) => res.Payload));
   }
+
+  //kieu chuyên id
+  getListLeave(id: number) {
+    return this.http
+      .get("/api/Leavecategory" + id)
+      .pipe(map((playload: any) => playload.Playload));
+  }
 }
