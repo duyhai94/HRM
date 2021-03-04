@@ -4,8 +4,8 @@
             <ion-row>
                 <ion-col size="12" class="card-modal-close" (click)="closeModal()"> <img src="assets/icon/close.svg" alt=""> </ion-col>
                 <ion-col size="12" class="card-modal-img"><img src="assets/icon/icon-timekeeping.svg" alt=""></ion-col>
-                <ion-col size="12" class="card-modal-header"> U checked in at 08:45 AM </ion-col>
-                <ion-col size="12" class="card-modal-text"> U are late 15 mins</ion-col>
+                <ion-col size="12" class="card-modal-header"> U checked in at {{checkInData?.CheckinTime}} </ion-col>
+                <ion-col size="12" class="card-modal-text"> U are late {{checkInData?.Duration}} mins</ion-col>
             </ion-row>
         </ion-grid>
     </div>

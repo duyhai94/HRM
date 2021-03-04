@@ -14,11 +14,14 @@ export class ModalService {
     ) { }
 
 
-    async TimeKeepingModal() {
+    async TimeKeepingModal(checkInData) {
       const modal = await this.modalController.create({
         component: ModalTimekeepingComponent,
         cssClass: 'my-custom-class',
         backdropDismiss: true,
+        componentProps: {
+          'checkInData': checkInData
+        }
       });
       return await modal.present();
     }
