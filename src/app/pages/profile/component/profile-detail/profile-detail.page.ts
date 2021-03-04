@@ -13,7 +13,11 @@ export class ProfileDetailPage implements OnInit {
   selected: number;
   profileModer: ProfileModel;
   workModel: WorkModel;
-
+  //toggle button
+  overview: boolean = true;
+  contact: boolean = true;
+  finance: boolean = true;
+  address: boolean = true;
   constructor(
     public profileService: ProfileService,
     public workService: WorkService
@@ -29,7 +33,16 @@ export class ProfileDetailPage implements OnInit {
     });
   }
 
-  showInfo(event: number) {
-    this.selected = event;
+  showOverviewProfile() {
+    this.overview = !this.overview;
+  }
+  showContactProfile() {
+    this.contact = !this.contact;
+  }
+  showFinanceProfile() {
+    this.finance = !this.finance;
+  }
+  showAddressProfile() {
+    this.address = !this.address;
   }
 }

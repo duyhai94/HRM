@@ -33,73 +33,39 @@
             </ion-row>
         </ion-grid>
     </ion-card>
-
-    <ion-card class="card-list" mode="ios">
-        <ion-grid>
-            <ion-row>
-                <ion-col size="2" class="ion-datetime-text">
-                    Từ
-                </ion-col>
-                <ion-col size="8" class="ion-datetime-label">
-                    {{startTime}}
-                </ion-col>
-                <ion-col size="2" class="card-list-icon-right" (click)="startDate()">
-                    <img src="assets/icon/icon-calendar.svg" alt="">
-                </ion-col>
-            </ion-row>
-        </ion-grid>
-    </ion-card>
-
-
-    <ion-card class="card-list" mode="ios">
-        <ion-grid>
-            <ion-row>
-                <ion-col size="2" class="ion-datetime-text">
-                    Đến
-                </ion-col>
-                <ion-col size="8" class="ion-datetime-label">
-                    {{endTime}}
-                </ion-col>
-                <ion-col size="2" class="card-list-icon-right" (click)="endDate()">
-                    <img src="assets/icon/icon-calendar.svg" alt="">
-                </ion-col>
-            </ion-row>
-        </ion-grid>
-    </ion-card>
-
-    <!-- <ion-list>
-        <ion-item class="datetime">
-            <ion-label>Từ</ion-label>
-            <ion-datetime mode="ios" class="ion-datetime-label" #mydt [pickerOptions]="customPickerOptions" placeholder="Sáng, 20/02/2020" displayFormat="A DD-MMM-YYYY" pickerFormat="DD-MM-YYYY A" [(ngModel)]="selYear">
-            </ion-datetime>
-            <img src="assets/icon/icon-calendar.svg" alt="">
+    <ion-list lines="none">
+        <ion-item>
+            <ion-label>Từ:</ion-label>
+            <ion-datetime mode="ios" placeholder="2020-03-15" display-format=" YYYY-MM-DD" (ionChange)="onDateChange($event)" picker-format="YYYY-MM-DD" [(ngModel)]="startDate"></ion-datetime>
+        </ion-item>
+        <ion-item>
+            <ion-label>Thời gian</ion-label>
+            <ion-datetime mode="ios" placeholder="08 AM" display-format="H A" picker-format="H A" [(ngModel)]="startTime"></ion-datetime>
         </ion-item>
         <ion-item>
             <ion-label>Đến</ion-label>
-            <ion-datetime mode="ios" class="ion-datetime-label" #mydt [pickerOptions]="customPickerOptions" placeholder="Sáng, 20/02/2020" displayFormat="A DD-MMM-YYYY" pickerFormat="DD-MM-YYYY " [(ngModel)]="selYear">
-            </ion-datetime>
-            <img src="assets/icon/icon-calendar.svg" alt="">
+            <ion-datetime mode="ios" placeholder="2020-03-15" display-format="YYYY-MM-DD" picker-format="YYYY-MM-DD" (ionChange)="onEndDateChange($event)" [(ngModel)]="endDate"></ion-datetime>
         </ion-item>
-    </ion-list> -->
+        <ion-item>
+            <ion-label>Thời gian</ion-label>
+            <ion-datetime mode="ios" placeholder="03 PM" display-format="H A" picker-format="H A" [(ngModel)]="endTime"></ion-datetime>
+        </ion-item>
 
-
-
-
-
+    </ion-list>
     <ion-grid>
         <ion-row class="home-leave-input ">
             <ion-col size="12 " class="input-title-content ">
                 Nội dung
             </ion-col>
             <ion-col size="12 ">
-                <ion-textarea rows="5 " class="input-content " placeholder="Nhập nội dung.... "></ion-textarea>
+                <ion-textarea rows="5 " class="input-content " placeholder="Nhập nội dung.... " [(ngModel)]="description"></ion-textarea>
             </ion-col>
             <ion-col size="12 " class="home-leave-input-day ">
                 <img src="assets/icon/icon-home-leave-day.svg " alt=" ">
                 <div>Phép năm còn lại: 5/12 ngày</div>
             </ion-col>
             <ion-col size="12 ">
-                <button class="button-primary "> Gửi đơn</button>
+                <button class="button-primary" (click)="sendForm()"> Gửi đơn</button>
             </ion-col>
         </ion-row>
     </ion-grid>

@@ -13,10 +13,6 @@ const routes: Routes = [
     loadChildren: () => import('./component/wages-payroll/wages-payroll.module').then( m => m.WagesPayrollPageModule)
   },
   {
-    path: 'salary-detail',
-    loadChildren: () => import('./component/salary-detail/salary-detail.module').then( m => m.SalaryDetailPageModule)
-  },
-  {
     path: 'wages-feedback',
     loadChildren: () => import('./component/wages-feedback/wages-feedback.module').then( m => m.WagesFeedbackPageModule)
   },

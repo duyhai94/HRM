@@ -13,26 +13,25 @@
                 <ion-col size="8" class="card-list-text">
                     Tổng quan
                 </ion-col>
-                <ion-col size="2" class="card-list-button" (click)="showInfo(1)">
-                    <ion-icon name="chevron-down-outline" *ngIf="selected != 1"></ion-icon>
+                <ion-col size="2" class="card-list-button" (click)="showOverviewProfile()">
+                    <ion-icon name="chevron-down-outline" *ngIf="overview == true"></ion-icon>
                     <!-- hide -->
-                    <ion-icon name="chevron-up-outline" *ngIf="selected == 1"></ion-icon>
+                    <ion-icon name="chevron-up-outline" *ngIf="overview == false"></ion-icon>
                 </ion-col>
             </ion-row>
-            <ion-row *ngIf="selected == 1">
+            <ion-row *ngIf="overview  == false">
                 <ion-col class="card-list-info-label" size="4">Họ tên</ion-col>
-                <ion-col class="card-list-info-text" size="8">Trần Quang Anh</ion-col>
+                <ion-col class="card-list-info-text" size="8">{{profileModer?.LastName}}</ion-col>
 
                 <ion-col class="card-list-info-label" size="4">Mã NV</ion-col>
-                <ion-col class="card-list-info-text" size="8">MNV001</ion-col>
+                <ion-col class="card-list-info-text" size="8">{{profileModer?.EmployeeCode}}</ion-col>
 
                 <ion-col class="card-list-info-label" size="4">Giới tính</ion-col>
-                <ion-col class="card-list-info-text" size="8">Nam</ion-col>
+                <ion-col class="card-list-info-text" size="8">{{profileModer?.Gender}}</ion-col>
 
                 <ion-col class="card-list-info-label" size="4">Ngày sinh</ion-col>
-                <ion-col class="card-list-info-text" size="8">29/08/1998</ion-col>
+                <ion-col class="card-list-info-text" size="8">{{profileModer?.DOB}}</ion-col>
             </ion-row>
-
         </ion-grid>
     </ion-card>
     <ion-card class="card-list">
@@ -44,23 +43,22 @@
                 <ion-col size="8" class="card-list-text">
                     Liên hệ
                 </ion-col>
-                <ion-col size="2" class="card-list-button" (click)="showInfo(2)">
-                    <ion-icon name="chevron-down-outline" *ngIf="selected != 2"></ion-icon>
+                <ion-col size="2" class="card-list-button" (click)="showContactProfile() ">
+                    <ion-icon name="chevron-down-outline" *ngIf="contact == true"></ion-icon>
                     <!-- hide -->
-                    <ion-icon name="chevron-up-outline" *ngIf="selected == 2"></ion-icon>
+                    <ion-icon name="chevron-up-outline" *ngIf="contact == false"></ion-icon>
                 </ion-col>
             </ion-row>
-            <ion-row *ngIf="selected == 2">
+            <ion-row *ngIf="contact == false">
                 <ion-col class="card-list-info-label" size="4">Email:</ion-col>
-                <ion-col class="card-list-info-text" size="8">tranquanganh@gmail.com</ion-col>
+                <ion-col class="card-list-info-text" size="8">{{profileModer?.Username}}</ion-col>
 
                 <ion-col class="card-list-info-label" size="4">Phone</ion-col>
-                <ion-col class="card-list-info-text" size="8">0987654321</ion-col>
-
-
+                <ion-col class="card-list-info-text" size="8">{{profileModer?.Phone}}</ion-col>
             </ion-row>
         </ion-grid>
     </ion-card>
+
     <ion-card class="card-list">
         <ion-grid>
             <ion-row>
@@ -70,11 +68,21 @@
                 <ion-col size="8" class="card-list-text">
                     Tài chính
                 </ion-col>
-                <ion-col size="2" class="card-list-button">
+                <ion-col size="2" class="card-list-button" (click)=" showFinanceProfile()">
                     <ion-icon name="chevron-down-outline"></ion-icon>
                 </ion-col>
             </ion-row>
+            <ion-row *ngIf="finance == false">
+                <ion-col class="card-list-info-label" size="4">STK:</ion-col>
+                <ion-col class="card-list-info-text" size="8">{{profileModer?.BankAccountNumber}}</ion-col>
 
+                <ion-col class="card-list-info-label" size="4">Ngân Hàng</ion-col>
+                <ion-col class="card-list-info-text" size="8">{{profileModer?.BankName}}</ion-col>
+
+
+                <ion-col class="card-list-info-label" size="4">Chi nhánh</ion-col>
+                <ion-col class="card-list-info-text" size="8">{{profileModer?.BankBranch}}</ion-col>
+            </ion-row>
         </ion-grid>
     </ion-card>
     <ion-card class="card-list">
@@ -86,11 +94,31 @@
                 <ion-col size="8" class="card-list-text">
                     Hành chính
                 </ion-col>
-                <ion-col size="2" class="card-list-button">
+                <ion-col size="2" class="card-list-button" (click)=" showAddressProfile()">
                     <ion-icon name="chevron-down-outline"></ion-icon>
                 </ion-col>
             </ion-row>
+            <ion-row *ngIf="address== false">
+                <ion-col class="card-list-info-label" size="4"> Nơi sinh:</ion-col>
+                <ion-col class="card-list-info-text" size="8">{{profileModer?.BirthLocation}}</ion-col>
 
+                <ion-col class="card-list-info-label" size="4">Quê quán:</ion-col>
+                <ion-col class="card-list-info-text" size="8">{{profileModer?.HoneTown}}</ion-col>
+
+                <ion-col class="card-list-info-label" size="4">Thường trú:</ion-col>
+                <ion-col class="card-list-info-text" size="8">{{profileModer?.ResidentLocationAddress}}</ion-col>
+
+                <ion-col class="card-list-info-label" size="4">CMT:</ion-col>
+                <ion-col class="card-list-info-text" size="8">{{profileModer?.NationalldentityNumber}}</ion-col>
+
+                <ion-col class="card-list-info-label" size="4">Ngày cấp:</ion-col>
+                <ion-col class="card-list-info-text" size="8">{{profileModer?.NationalldentityDate}}</ion-col>
+
+                <ion-col class="card-list-info-label" size="4">Nơi cấp:</ion-col>
+                <ion-col class="card-list-info-text" size="8">{{profileModer?.NationalldentityLocation}}</ion-col>
+
+
+            </ion-row>
         </ion-grid>
     </ion-card>
     <ion-grid class="profile-detail-feedback">

@@ -9,6 +9,11 @@
         display: flex;
         justify-content: flex-start;
         width: 22px;
+        ion-icon {
+            color: var(--ion-color-warning) !important;
+            width: 30px;
+            height: 30px;
+        }
     }
     .header-detail-text {
         font-size: 16px;

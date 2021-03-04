@@ -16,3 +16,59 @@
     background-position: top;
     background-position-x: 32px;
 }
+
+.profile-work-timeline {
+    width: 90%;
+    margin-left: 10%;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        left: -15px;
+        top: 10px;
+        background-image: url(../../../../../assets/profile/icon-TL-1.png);
+        background-repeat: no-repeat;
+        background-position: top center;
+        width: 10%;
+        height: 24px;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        left: -15px;
+        top: 40px;
+        background-image: url(../../../../../assets/profile/icon-line.svg);
+        background-repeat: repeat-y;
+        background-position: top center;
+        width: 10%;
+        height: 100%;
+    }
+}
+
+.profile-work-timeline:first-child {
+    &::before {
+        content: "";
+        position: absolute;
+        left: -15px;
+        top: 10px;
+        background-image: url(../../../../../assets/profile/icon-TL-now.png);
+        background-repeat: no-repeat;
+        background-position: top center;
+        width: 10%;
+        height: 34px;
+    }
+}
+
+.profile-work-timeline:last-child {
+    &::after {
+        content: "";
+        position: absolute;
+        left: -15px;
+        top: 40px;
+        background-image: url(../../../../../assets/profile/icon-line.svg);
+        background-repeat: repeat-y;
+        background-position: top center;
+        width: 10%;
+        height: auto;
+    }
+}
