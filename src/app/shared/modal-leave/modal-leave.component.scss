@@ -1,0 +1,66 @@
+.modal-leave {
+    width: 100%;
+    padding: 1em;
+    .modal-leave-header {
+        .modal-leave-header-text {
+            font-size: 1rem;
+            color: var(--ion-color-light);
+        }
+        .modal-leave-header-icon {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+    .modal-leave-checkbox {
+        color: var(--light-shade);
+        .checkbox {
+            display: flex;
+            align-items: center;
+            .checkbox-btn {
+                margin-left: 1em;
+                border: 1px solid var(--light-shade);
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+.leave-calendar-header {
+    color: var(--ion-color-danger-contrast) !important;
+    p {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 8px 0;
+        border-radius: 20px;
+        border: 0.5px solid var(--ion-color-warning-tint);
+        font-size: 16;
+        font-weight: 600;
+        color: var(--ion-color-warning-tint);
+    }
+    .head {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 10px 0;
+        button {
+            background-color: transparent;
+            &:focus {
+                outline: none;
+            }
+            ion-icon {
+                color: var(--ion-color-warning-tint);
+                font-size: 20px;
+                font-weight: 600;
+            }
+        }
+        span {
+            color: var(--ion-color-warning-tint);
+            font-weight: 600;
+            display: block;
+            padding-bottom: 2px;
+        }
+    }
+}

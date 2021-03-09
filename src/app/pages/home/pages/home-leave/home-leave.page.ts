@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { LeaveModel } from "src/app/model/leave/leave.model";
 import { LeaveService } from "src/app/service/leave/leave.service";
+import { ModalService } from "src/app/shared/service/modal.service";
 
 @Component({
   selector: "app-home-leave",
@@ -8,31 +9,29 @@ import { LeaveService } from "src/app/service/leave/leave.service";
   styleUrls: ["./home-leave.page.scss"],
 })
 export class HomeLeavePage implements OnInit {
+  startTime = "Buổi sáng, 07,03,2021";
+  endTime = "Buổi chiều, 09,03,2021";
   description: any;
-  leaveModel: LeaveModel;
-  startDate: any;
-  startTime: any;
-  endDate: any;
-  endTime: any;
-  constructor(private leaveService: LeaveService) {}
+  constructor(
+    private leaveService: LeaveService,
+    private modalService: ModalService
+  ) {}
   ngOnInit() {}
 
   getlistLeave(LeavecategoryId: number) {
-    this.leaveService.getListLeave(LeavecategoryId);
+    // this.leaveService.getListLeave(LeavecategoryId);
   }
   sendForm() {
-    this.leaveModel = {
-      LeavecategoryId: 1,
-      Description: this.description,
-      StartTime: this.startTime,
-      EndTime: this.endTime,
-    };
-    console.log(this.leaveModel);
+    // this.leaveModel = {
+    //   LeavecategoryId: 1,
+    //   Description: this.description,
+    //   StartTime: this.startTime,
+    //   EndTime: this.endTime,
+    // };
+    // console.log(this.leaveModel);
   }
-  onDateChange(ev) {
-    this.startTime = ev.detail.value;
-  }
-  onEndDateChange(ev) {
-    this.endTime = ev.detail.value;
+
+  leaveModal() {
+    this.modalService.LeaveModal();
   }
 }

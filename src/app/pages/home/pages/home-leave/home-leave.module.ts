@@ -8,6 +8,7 @@ import { HomeLeavePageRoutingModule } from "./home-leave-routing.module";
 
 import { HomeLeavePage } from "./home-leave.page";
 import { SharedModule } from "src/app/shared/shared.module";
+import { NgCalendarModule } from "ionic2-calendar";
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import { SharedModule } from "src/app/shared/shared.module";
     IonicModule,
     HomeLeavePageRoutingModule,
     SharedModule,
+    NgCalendarModule,
   ],
   declarations: [HomeLeavePage],
 })

@@ -1,0 +1,52 @@
+<ion-grid class="modal-leave">
+    <ion-row class="modal-leave-header">
+        <ion-col size="6" class="modal-leave-header-text">Chọn ngày </ion-col>
+        <ion-col size="6" class="modal-leave-header-icon">
+            <img (click)="close()" src="assets/icon/close.svg" alt="">
+        </ion-col>
+    </ion-row>
+    <ion-row class="modal-leave-checkbox">
+        <ion-col size="6" class="checkbox">
+            <ion-label> Buổi sáng</ion-label>
+            <ion-checkbox class="checkbox-btn" mode="ios" color="primary"></ion-checkbox>
+        </ion-col>
+        <ion-col size="6" class="checkbox">
+            <ion-label>Buổi chiều</ion-label>
+            <ion-checkbox class="checkbox-btn" mode="ios" color="primary"></ion-checkbox>
+        </ion-col>
+    </ion-row>
+    <ion-row class="leave-calendar-header">
+        <ion-col size="4">
+            <p class="today" (click)="today()">
+                Hôm nay
+            </p>
+        </ion-col>
+        <ion-col size="8" class="ion-justify-self-end">
+            <div class="head">
+                <button (click)="slidePrev()">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+            </button>
+                <span>{{ viewTitle }}</span>
+                <button (click)="slideNext()">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+            </button>
+            </div>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col size="12">
+            <calendar [formatDayHeader]="'EEEEE'" [calendarMode]="'month'" [currentDate]="calendar.currentDate" (onCurrentDateChanged)="onCurrentDateChanged($event)" (onTitleChanged)="onViewTitleChanged($event)" (onTimeSelected)="onTimeSelected($event)" step="30">
+            </calendar>
+        </ion-col>
+        <ion-col size="12">
+            <button class="button-primary">Xác nhận</button>
+        </ion-col>
+    </ion-row>
+</ion-grid>
+
+
+
+
+<!--   <label for="pm"> Buổi chiều
+          <input type="radio" name="" id="pm">
+        </label> -->

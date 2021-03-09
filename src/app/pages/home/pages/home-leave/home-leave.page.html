@@ -33,25 +33,39 @@
             </ion-row>
         </ion-grid>
     </ion-card>
-    <ion-list lines="none">
-        <ion-item>
-            <ion-label>Từ:</ion-label>
-            <ion-datetime mode="ios" placeholder="2020-03-15" display-format=" YYYY-MM-DD" (ionChange)="onDateChange($event)" picker-format="YYYY-MM-DD" [(ngModel)]="startDate"></ion-datetime>
-        </ion-item>
-        <ion-item>
-            <ion-label>Thời gian</ion-label>
-            <ion-datetime mode="ios" placeholder="08 AM" display-format="H A" picker-format="H A" [(ngModel)]="startTime"></ion-datetime>
-        </ion-item>
-        <ion-item>
-            <ion-label>Đến</ion-label>
-            <ion-datetime mode="ios" placeholder="2020-03-15" display-format="YYYY-MM-DD" picker-format="YYYY-MM-DD" (ionChange)="onEndDateChange($event)" [(ngModel)]="endDate"></ion-datetime>
-        </ion-item>
-        <ion-item>
-            <ion-label>Thời gian</ion-label>
-            <ion-datetime mode="ios" placeholder="03 PM" display-format="H A" picker-format="H A" [(ngModel)]="endTime"></ion-datetime>
-        </ion-item>
 
-    </ion-list>
+    <ion-card class="card-list" mode="ios">
+        <ion-grid>
+            <ion-row>
+                <ion-col size="2" class="ion-datetime-text">
+                    Từ
+                </ion-col>
+                <ion-col size="8" class="ion-datetime-label">
+                    {{startTime}}
+                </ion-col>
+                <ion-col size="2" class="card-list-icon-right" (click)="leaveModal()">
+                    <img src="assets/icon/icon-calendar.svg" alt="">
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-card>
+
+    <ion-card class="card-list" mode="ios">
+        <ion-grid>
+            <ion-row>
+                <ion-col size="2" class="ion-datetime-text">
+                    Đến
+                </ion-col>
+                <ion-col size="8" class="ion-datetime-label">
+                    {{endTime}}
+                </ion-col>
+                <ion-col size="2" class="card-list-icon-right" (click)="leaveModal()">
+                    <img src="assets/icon/icon-calendar.svg" alt="">
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-card>
+
     <ion-grid>
         <ion-row class="home-leave-input ">
             <ion-col size="12 " class="input-title-content ">

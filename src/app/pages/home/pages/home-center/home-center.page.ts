@@ -17,31 +17,35 @@ import { ModalService } from "src/app/shared/service/modal.service";
 export class HomeCenterPage implements OnInit {
   //model
   timeKeepingModal: TimeKeepingModal;
-  today = new Date().getFullYear() + '-' + new Date().getMonth() + '-'+  new Date().getDate();
+  today =
+    new Date().getFullYear() +
+    "-" +
+    new Date().getMonth() +
+    "-" +
+    new Date().getDate();
   checkInDay: CheckInDay;
   fakeData = {
-    WorkingDay :  this.today,
-    CheckinTime: '8.45 AM',
-    CheckoutTime: '',
+    WorkingDay: this.today,
+    CheckinTime: "8.45 AM",
+    CheckoutTime: "",
     Duration: 5,
-  }
+  };
   //time today
   constructor(
     public modalService: ModalService,
     private timeService: TimeKeepingService,
-    private alertController: AlertController,
+    private alertController: AlertController
   ) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
   getCheckInDay() {
-    this.timeService.getReportDate(this.today).subscribe((res:any) => {
+    this.timeService.getReportDate(this.today).subscribe((res: any) => {
       this.checkInDay = res;
-    })
+    });
     this.checkInDay = this.fakeData;
   }
   timeKeeping(checkInData) {
-    this.modalService.TimeKeepingModal(checkInData);    
+    this.modalService.TimeKeepingModal(checkInData);
     setTimeout(() => {
       this.modalService.CloseModal();
     }, 3000);
@@ -52,24 +56,25 @@ export class HomeCenterPage implements OnInit {
   raised_hands;
   async presentAlertConfirm() {
     const alert = await this.alertController.create({
-      cssClass: 'home-alert',
-      header: 'Confirm!',
-      message: 'Bạn có muốn chấm công?',
+      cssClass: "home-alert",
+      header: "Confirm!",
+      message: "Bạn có muốn chấm công?",
+      mode: "ios",
       buttons: [
         {
-          text: 'Cancel',
-          role: 'cancel',
-          cssClass: 'secondary',
-          handler: () => {
-          }
-        }, {
-          text: 'Okay',
+          text: "Cancel",
+          role: "cancel",
+          cssClass: "secondary",
+          handler: () => {},
+        },
+        {
+          text: "Okay",
           handler: () => {
             this.getCheckInDay();
             this.timeKeeping(this.checkInDay);
-          }
-        }
-      ]
+          },
+        },
+      ],
     });
     await alert.present();
   }
